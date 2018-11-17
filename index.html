@@ -8,11 +8,19 @@
     <!-- Повторяющаяся шапка сайта -->
     <header class="main-header">
       <nav class="main-navigation">
+        <!-- Навигация по сайту. Здесь независимые разделы сайты. Значит это список -->
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="marketing.html">Доставка и оплата</a></li>
           <li><a href="about.html">О Компании</a></li>
         </ul>
+        <!-- Раздел с взаимозависимыми элементами. Здесь список не применим.
+        Размечается отдельными блоками. Возможен переход на страницы каждой функции -->
+        <section class="user-navigation">
+          <div class="search"><a href="search.html">Поиск</a></div>
+          <div class="login"><a href="login.html">Вход</a></div>
+          <div class="basket"><a href="basket.html">Корзина</a></div>
+        </section>        
       </nav>
     </header>
   </body>
