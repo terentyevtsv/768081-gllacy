@@ -22,12 +22,131 @@
         
         <!-- Раздел с взаимозависимыми элементами. Здесь список не применим.
         Размечается отдельными блоками. Возможен переход на страницы каждой функции -->
-        <section class="user-navigation">
+        <div class="user-navigation">          
           <div class="search"><a href="search.html">Поиск</a></div>
           <div class="login"><a href="login.html">Вход</a></div>
           <div class="basket"><a href="basket.html">Корзина</a></div>
-        </section>        
+        </div>        
       </nav>
     </header>
+
+    <!-- Уникальный раздел страницы -->
+    <main class="container">
+      <h1 class="visually-hidden">Магазин «Глейси»</h1>
+      <section class="promo">
+        <!-- Пока не размечается -->
+      </section>
+
+      <!-- Преимущества -->
+      <section class="features">
+        <h2>
+          Магазин Глэйси — это онлайн- и офлайн-магазин по 
+          продаже мороженого собственного производства на развес
+        </h2>
+
+        <!-- Перечисление преимуществ -->
+        <ul class="features-list">
+          <li class="feature-item">
+            <h3 class="visually-hidden">Технологичность</h3>
+            <p>
+              Все наше мороженое изготавливается на собственном 
+              производстве, с использованием современного оборудования 
+              и проверенных временем технологий.
+            </p>
+          </li>
+
+          <li class="feature-item">
+            <h3 class="visually-hidden">Безопасность</h3>
+            <p>
+                Закупка ингредиентов  производится только 
+                у проверенных фермерских хозяйств и компаний, 
+                с которыми нас связывает долговременное 
+                сотрудничество.
+            </p>
+          </li>
+
+          <li class="feature-item">
+              <h3 class="visually-hidden">Качество</h3>
+              <p>
+                  Для приготовления мороженого используются 
+                  настоящие сливки и молоко высочайшего качества. 
+                  Все дополнительные ингредиенты и добавки произведены 
+                  из натурального, экологически чистого сырья.
+              </p>
+          </li>
+
+          <li class="feature-item">
+              <h3 class="visually-hidden">Сохранность</h3>
+              <p>
+                  Доставка нашего мороженого до заказчиков 
+                  осуществляется в специальном термопаке, 
+                  который не дает мороженому растаять в пути и 
+                  позволяет сохранить превосходный вкус.
+              </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Новости блога. Можно вытащить из страницы и смысл не потеряется -->
+      <article class="news">
+        <h2>Новое в нашем блоге</h2>
+        <a href="laying.html">
+          10 способов сервировки фруктовых щербетов к столу
+        </a>
+      </article>
+
+      <section class="subscription">
+        <h2 class="visually-hidden">Подписка на новости магазина</h2>
+        <p>
+          Подпишитесь на нашу сладкую рассылку 
+          и будете всегда в курсе всего самого 
+          вкусного, что у нас происходит. 
+          Обещаем не спамить и не слать всякой 
+          ненужной ерунды. Честно =)
+        </p>
+        <p>
+          <input type="text" placeholder="Электронная почта">
+          <button>Отправить</button>
+        </p>
+      </section>
+
+      <!-- Расположение на карте -->
+      <section class="location">
+        <!-- Пока не размечается -->
+      </section>      
+    </main>
+    
+    <!-- Повторяющийся подвал сайта -->
+    <footer class="main-footer">
+      <div class="footer-social">
+        <ul>
+          <li><a class="social-button" href="#">Твиттер</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Вконтакте</a></li>
+        </ul>
+      </div>
+
+      <!-- Ссылки на разные документы -->
+      <nav class="documents">
+        <ul class="document-list">
+          <li class="document-item"><a href="#">Для поставщиков</a></li>
+          <li class="document-item"><a href="#">Наши документы</a></li>
+          <li class="document-item"><a href="#">О производстве</a></li>
+          <li class="document-item"><a href="#">Экологические стандарты</a></li>          
+        </ul>
+      </nav>
+
+      <!-- Раздел авторских прав -->
+      <p class="footer-logo">
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/academy-logo.svg" width="108" height="39" alt="Логотип HTML Академии">
+        </a>        
+      </p>
+      <p class="footer-copyright">
+          Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 
+          © 2017
+      </p>
+    </footer>
   </body>
 </html>
