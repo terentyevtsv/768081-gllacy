@@ -27,23 +27,26 @@
           <div class="login"><a href="login.html">Вход</a></div>
           <div class="basket"><a href="basket.html">2 товара</a></div>
         </div>
-        <p class="">
-          <span>С 10 до 20, ежедневно</span>
-          <br/>
-          8 812 450-25-25
-        </p>
       </nav>
+
+      <!-- Параграф вытащил из навигации -->
+      <p class="contacts">
+        <span>С 10 до 20, ежедневно</span>
+        8 812 450-25-25
+      </p>
     </header>
 
     <!-- Основная часть каталога -->
     <main class="container">
       <!-- Заголовок страницы с навигацией Хлебные крошки -->
       <h1 class="page-title">Сливочное мороженое</h1>
-      <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li class="breadcrumbs-current">Сливочное</li>
-      </ul>
+      <nav>
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li class="breadcrumbs-current">Сливочное</li>
+        </ul>
+      </nav>
 
       <!-- Фильтры пропускаем -->
       <section class="filters">
@@ -226,14 +229,12 @@
 
     <!-- Повторяющийся подвал сайта -->
     <footer class="main-footer">
-      <div class="footer-social">
-        <ul>
-          <li><a class="social-button" href="#">Твиттер</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-        </ul>
-      </div>
+      <ul class="footer-social">
+        <li><a class="social-button" href="#">Твиттер</a></li>
+        <li><a class="social-button" href="#">Инстаграм</a></li>
+        <li><a class="social-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button" href="#">Вконтакте</a></li>
+      </ul>
 
       <!-- Ссылки на разные документы -->
       <nav class="documents">
@@ -246,15 +247,17 @@
       </nav>
 
       <!-- Раздел авторских прав -->
-      <p class="footer-logo">
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/academy-logo.svg" width="108" height="39" alt="Логотип HTML Академии">
-        </a>
-      </p>
-      <p class="footer-copyright">
-          Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-          © 2017
-      </p>
+      <div class="author">
+        <p class="footer-logo">
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/academy-logo.svg" width="108" height="39" alt="Логотип HTML Академии">
+          </a>
+        </p>
+        <p class="footer-copyright">
+            Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            © 2017
+        </p>
+      </div>
     </footer>
   </body>
 </html>
