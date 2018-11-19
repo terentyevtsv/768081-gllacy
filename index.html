@@ -40,7 +40,100 @@
     <main class="container">
       <h1 class="visually-hidden">Магазин «Глейси»</h1>
       <section class="promo">
-        <!-- Пока не размечается -->
+        <h2 class="visually-hidden">Сеты мороженого</h2>
+
+        <!-- Картинки слайдера будут фоном, т.к.
+        они дублируются описанием в параграфе -->
+        <div class="slider">
+          <div><p>Крем-брюле и пломбир с малиновым джемом</p></div>
+          <div><p>Шоколадный пломбир и лимонный сорбет</p></div>
+          <div><p>Пломбир с помадкой и клубничный щербет</p></div>
+        </div>
+
+        <!-- Элементы управления промо-акциями -->
+        <div class="promo-controls">
+          <div class="slider-buttons">
+            <input type="radio" id="btn-1" checked>
+            <input type="radio" id="btn-2">
+            <input type="radio" id="btn-3">
+          </div>
+          <a href="basket.html" class="btn">Давайте оба!</a>
+        </div>
+
+        <ul class="offer-list">
+          <li class="offer-item">
+            <h3>Малинка даром!</h3>
+            <p>
+              При покупке 2 кг любого фруктового мороженого, добавим
+              в ваш заказ банку малинового варенья бесплатно.
+            </p>
+            <a href="basket.html" class="btn">Хочу варенье!</a>
+          </li>
+          <li class="offer-item">
+            <h3>Шоколадки даром!</h3>
+            <p>
+              При покупке 2 кг пломбира, добавим в ваш заказ упаковку
+              вкуснейшей шоколадной присыпки совершенно бесплатно.
+            </p>
+            <a href="basket.html" class="btn">Хочу шоколадки!</a>
+          </li>
+        </ul>
+
+        <!-- Часть каталога копируется -->
+        <ul class="catalog-list">
+          <li class="catalog-item">
+            <img src="img/product-1.jpg" width="267" height="267"
+                  alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <h3>
+              <a href="catalog-item.html">
+                Сливочное с апельсиновым джемом и цитрусовой стружкой
+              </a>
+            </h3>
+            <p>
+              <b>310 ₽</b>
+              <span>/кг</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/product-2.jpg" width="267" height="267"
+                  alt="Сливочно-кофейное с кусочками шоколада">
+            <h3>
+              <a href="catalog-item.html">
+                Сливочно-кофейное с кусочками шоколада
+              </a>
+            </h3>
+            <p>
+              <b>380 ₽</b>
+              <span>/кг</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/product-3.jpg" width="267" height="267"
+                  alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <h3>
+              <a href="catalog-item.html">
+                Сливочно-клубничное с присыпкой из белого шоколада
+              </a>
+            </h3>
+            <p>
+              <b>355 ₽</b>
+              <span>/кг</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/product-4.jpg" width="267" height="267"
+                  alt="Сливочное крем-брюле с карамельной подливкой">
+            <h3>
+              <a href="catalog-item.html">
+                Сливочное крем-брюле с карамельной подливкой
+              </a>
+            </h3>
+            <p>
+              <b>415 ₽</b>
+              <span>/кг</span>
+            </p>
+          </li>
+        </ul>
       </section>
 
       <!-- Преимущества -->
@@ -101,14 +194,23 @@
           </p>
           <p>
             <input type="text" placeholder="Электронная почта">
-            <button>Отправить</button>
+            <button class="btn">Отправить</button>
           </p>
         </section>
       </div>
 
       <!-- Расположение на карте -->
       <section class="location">
-        <!-- Пока не размечается -->
+        <h2 class="visually-hidden">На карте</h2>
+        <section class="shop-info">
+          <h3>Адрес главного офиса и офлайн-магазина:</h3>
+          <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+
+          <h3>Для заказов по телефону:</h3>
+          <p>8 812 450-25-25 <span>(c 10 до 20 ежедневно)</span></p>
+
+          <a class="btn" href="feedback.html">Форма обратной связи</a>
+        </section>
       </section>
     </main>
 
