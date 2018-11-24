@@ -39,6 +39,95 @@
     <!-- Уникальный раздел страницы -->
     <main class="container">
       <h1 class="visually-hidden">Магазин «Глейси»</h1>
+
+      <!-- Главное меню -->
+      <section class="new-items">
+        <h2>Новинки</h2>
+        <ul>
+          <li class="new-item"><a href="catalog.html">Сливочное</a></li>
+          <li class="new-item"><a href="catalog.html">Щербеты</a></li>
+          <li class="new-item"><a href="catalog.html">Фруктовый лед</a></li>
+          <li class="new-item"><a href="catalog.html">Мелорин</a></li>
+        </ul>
+      </section>
+
+      <!-- Вход -->
+      <section class="login">
+        <h2 class="visually-hidden">Личный кабинет</h2>
+        <form class="login-form" aria-label="Введите электронную почту и пароль"
+              method="post">
+          <p>
+            <label class="visually-hidden">
+              Электронная почта
+              <input class="login-email" type="text"
+                      placeholder="Электронная почта"
+                      name="email">
+            </label>
+          </p>
+          <p>
+            <label class="visually-hidden">
+              Пароль
+              <input class="login-password" type="password"
+                      placeholder="Пароль"
+                      name="password">
+            </label>
+          </p>
+          <button class="btn" type="submit">Войти</button>
+          <p class="email-password-info">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </p>
+        </form>
+      </section>
+
+      <!-- Поиск -->
+      <section class="search">
+        <h2 class="visually-hidden">Поиск на сайте</h2>
+        <form class="form-search" >
+          <label class="visually-hidden">
+            Ключевое слово
+            <input class="search-phrase" type="text"
+                    placeholder="Что ищем?" name="keyword">
+          </label>
+          <!-- Круглая ссылка с лупой на страницу результата поиска -->
+          <a class="btn-search" href="#">Поиск</a>
+        </form>
+      </section>
+
+      <!-- Обратная связь -->
+      <section class="feedback">
+        <h2>Мы обязательно вам ответим!</h2>
+        <form class="form-feedback" method="post">
+          <p>
+            <label class="visually-hidden">
+              Имя
+              <input class="feedback-name" type="text"
+                      placeholder="Как вас зовут?" name="name">
+            </label>
+          </p>
+          <p>
+            <label class="visually-hidden">
+              Электронная почта
+              <input class="feedback-email" type="text"
+                      placeholder="Как вас зовут?" name="email">
+            </label>
+          </p>
+          <p>
+            <label class="visually-hidden">
+              Напишите ваши пожелания!
+              <textarea class="feedback-text"
+                        placeholder="Напишите что-нибудь..."
+                        name="wishes">
+              </textarea>
+            </label>
+          </p>
+          <button class="btn" type="submit">
+            Отправить
+          </button>
+        </form>
+        <button class="btn-close" type="button">Закрыть</button>
+      </section>
+
       <section class="promo">
         <h2 class="visually-hidden">Сеты мороженого</h2>
 
@@ -67,7 +156,7 @@
               При покупке 2 кг любого фруктового мороженого, добавим
               в ваш заказ банку малинового варенья бесплатно.
             </p>
-            <a href="basket.html" class="btn">Хочу варенье!</a>
+            <a class="btn" href="basket.html">Хочу варенье!</a>
           </li>
           <li class="offer-item">
             <h3>Шоколадки даром!</h3>
@@ -75,7 +164,7 @@
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку
               вкуснейшей шоколадной присыпки совершенно бесплатно.
             </p>
-            <a href="basket.html" class="btn">Хочу шоколадки!</a>
+            <a class="btn" href="basket.html">Хочу шоколадки!</a>
           </li>
         </ul>
 
@@ -185,6 +274,7 @@
 
         <section class="subscription">
           <h2 class="visually-hidden">Подписка на новости магазина</h2>
+
           <p>
             Подпишитесь на нашу сладкую рассылку
             и будете всегда в курсе всего самого
@@ -192,10 +282,16 @@
             Обещаем не спамить и не слать всякой
             ненужной ерунды. Честно =)
           </p>
-          <p>
-            <input type="text" placeholder="Электронная почта">
-            <button class="btn">Отправить</button>
-          </p>
+
+          <form class="form-subscription" method="post">
+            <label class="visually-hidden">
+              Электронная почта
+              <input class="subscription-email" type="text"
+                      placeholder="Электронная почта"
+                      name="email">
+            </label>
+            <button class="btn" type="submit">Отправить</button>
+          </form>
         </section>
       </div>
 
