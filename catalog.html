@@ -48,6 +48,42 @@
         </ul>
       </nav>
 
+      <section class="section-basket">
+        <form class="form-basket" method="post">
+          <table>
+            <caption class="visually-hidden">Выбранное мороженое</caption>
+            <tfoot>
+              <tr>
+                <td colspan="4">Итого: 750 руб.</td>
+              </tr>
+            </tfoot>
+            <tr class="visually-hidden">
+              <th>Удалить из списка</th>
+              <th>Наименование</th>
+              <th>Вес</th>
+              <th>Цена</th>
+            </tr>
+            <tr>
+              <td><button class="btn-remove" type="button">Удалить</button></td>
+              <td>Пломбир с апельсиновым джемом</td>
+              <td>1,5 кг х <span>200 руб.</span></td>
+              <td>300 руб.</td>
+            </tr>
+            <tr>
+              <td><button class="btn-remove" type="button">Удалить</button></td>
+              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5 кг х <span>300 руб.</span></td>
+              <td>450 руб.</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Оформить заказ</a>
+        </form>
+      </section>
+
+      <section class="quick-view">
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </section>
+
       <!-- Фильтры пропускаем -->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -218,12 +254,21 @@
 
         <!-- Пока что не надо -->
         <ul class="pagination-list">
+          <li class="pagination-item">
+            <button class="btn-arrow-left" type="button" disabled>
+              Назад
+            </button>
+          </li>
           <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
           <li class="pagination-item"><a>2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
-          <li class="pagination-item"><a href="#">></a></li>
+          <li class="pagination-item">
+            <button class="btn-arrow-right" type="button">
+              Вперед
+            </button>
+          </li>
         </ul>
       </section>
     </main>
