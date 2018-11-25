@@ -15,7 +15,16 @@
 
         <!-- Навигация по сайту. Здесь независимые разделы сайты. Значит это список -->
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li>
+            <a href="#">Каталог</a>
+            <ul>
+              <li class="new-item"><a href="#">Новинки</a></li>
+              <li class="new-item"><a>Сливочное</a></li>
+              <li class="new-item"><a href="#">Щербеты</a></li>
+              <li class="new-item"><a href="#">Фруктовый лед</a></li>
+              <li class="new-item"><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="marketing.html">Доставка и оплата</a></li>
           <li><a href="about.html">О Компании</a></li>
         </ul>
@@ -23,9 +32,81 @@
         <!-- Раздел с взаимозависимыми элементами. Здесь список не применим.
         Размечается отдельными блоками. Возможен переход на страницы каждой функции -->
         <div class="user-navigation">
-          <div class="search"><a href="search.html">Поиск</a></div>
-          <div class="login"><a href="login.html">Вход</a></div>
-          <div class="basket"><a href="basket.html">2 товара</a></div>
+          <div class="search">
+            <a href="search.html">Поиск</a>
+            <!-- Поиск -->
+            <div class="section-search">
+              <form class="form-search" aria-label="Поиск на сайте">
+                <label class="visually-hidden">
+                  Ключевое слово
+                  <input class="search-phrase" type="text"
+                          placeholder="Что ищем?" name="keyword">
+                </label>
+                <!-- Круглая ссылка с лупой на страницу результата поиска -->
+                <a class="btn-search" href="#">Поиск</a>
+              </form>
+            </div>
+          </div>
+          <div class="login">
+            <a href="login.html">Вход</a>
+            <!-- Вход -->
+            <div class="login">
+              <form class="login-form" aria-label="Введите электронную почту и пароль"
+                    method="post">
+                <p>
+                  <label class="visually-hidden">
+                    Электронная почта
+                    <input class="login-email" type="text"
+                            placeholder="Электронная почта"
+                            name="email">
+                  </label>
+                </p>
+                <p>
+                  <label class="visually-hidden">
+                    Пароль
+                    <input class="login-password" type="password"
+                            placeholder="Пароль"
+                            name="password">
+                  </label>
+                </p>
+                <button class="btn" type="submit">Войти</button>
+                <p class="email-password-info">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </p>
+              </form>
+            </div>
+          </div>
+          <div class="basket">
+            <a href="basket.html">2 товара</a>
+            <div class="section-basket">
+              <table aria-label="Корзина">
+                <caption class="visually-hidden">Выбранное мороженое</caption>
+                <tr class="visually-hidden">
+                  <th>Удалить из списка</th>
+                  <th>Наименование</th>
+                  <th>Вес</th>
+                  <th>Цена</th>
+                </tr>
+                <tr>
+                  <td><button class="btn-remove" type="button">Удалить</button></td>
+                  <td>Пломбир с апельсиновым джемом</td>
+                  <td>1,5 кг х <span>200 руб.</span></td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td><button class="btn-remove" type="button">Удалить</button></td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td>1,5 кг х <span>300 руб.</span></td>
+                  <td>450 руб.</td>
+                </tr>
+                <tr>
+                  <td colspan="4">Итого: 750 руб.</td>
+                </tr>
+              </table>
+              <a class="btn" href="#">Оформить заказ</a>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -47,42 +128,6 @@
           <li class="breadcrumbs-current">Сливочное</li>
         </ul>
       </nav>
-
-      <section class="section-basket">
-        <h2 class="visually-hidden">Корзина</h2>
-        <form class="form-basket" method="post">
-          <table>
-            <caption class="visually-hidden">Выбранное мороженое</caption>
-            <tr class="visually-hidden">
-              <th>Удалить из списка</th>
-              <th>Наименование</th>
-              <th>Вес</th>
-              <th>Цена</th>
-            </tr>
-            <tr>
-              <td><button class="btn-remove" type="button">Удалить</button></td>
-              <td>Пломбир с апельсиновым джемом</td>
-              <td>1,5 кг х <span>200 руб.</span></td>
-              <td>300 руб.</td>
-            </tr>
-            <tr>
-              <td><button class="btn-remove" type="button">Удалить</button></td>
-              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-              <td>1,5 кг х <span>300 руб.</span></td>
-              <td>450 руб.</td>
-            </tr>
-            <tr>
-              <td colspan="4">Итого: 750 руб.</td>
-            </tr>
-          </table>
-          <a class="btn" href="#">Оформить заказ</a>
-        </form>
-      </section>
-
-      <section class="quick-view">
-        <h2 class="visually-hidden">Карточка товара</h2>
-        <a class="btn" href="#">Быстрый просмотр</a>
-      </section>
 
       <!-- Фильтры пропускаем -->
       <section class="filters">
@@ -106,6 +151,7 @@
               <b>310 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-2.jpg" width="267" height="267"
@@ -119,6 +165,7 @@
               <b>380 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-3.jpg" width="267" height="267"
@@ -132,6 +179,7 @@
               <b>355 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-4.jpg" width="267" height="267"
@@ -145,6 +193,7 @@
               <b>415 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-5.jpg" width="267" height="267"
@@ -158,6 +207,7 @@
               <b>325 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-6.jpg" width="267" height="267"
@@ -171,6 +221,7 @@
               <b>410 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-7.jpg" width="267" height="267"
@@ -184,6 +235,7 @@
               <b>375 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-8.jpg" width="267" height="267"
@@ -197,6 +249,7 @@
               <b>320 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-9.jpg" width="267" height="267"
@@ -210,6 +263,7 @@
               <b>440 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-10.jpg" width="267" height="267"
@@ -223,6 +277,7 @@
               <b>435 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-11.jpg" width="267" height="267"
@@ -236,6 +291,7 @@
               <b>355 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-12.jpg" width="267" height="267"
@@ -249,6 +305,7 @@
               <b>420 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
         </ul>
 

@@ -15,7 +15,16 @@
 
         <!-- Навигация по сайту. Здесь независимые разделы сайты. Значит это список -->
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li>
+            <a href="#">Каталог</a>
+            <ul>
+              <li class="new-item"><a href="#">Новинки</a></li>
+              <li class="new-item"><a href="catalog.html">Сливочное</a></li>
+              <li class="new-item"><a href="#">Щербеты</a></li>
+              <li class="new-item"><a href="#">Фруктовый лед</a></li>
+              <li class="new-item"><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="marketing.html">Доставка и оплата</a></li>
           <li><a href="about.html">О Компании</a></li>
         </ul>
@@ -23,8 +32,51 @@
         <!-- Раздел с взаимозависимыми элементами. Здесь список не применим.
         Размечается отдельными блоками. Возможен переход на страницы каждой функции -->
         <div class="user-navigation">
-          <div class="search"><a href="search.html">Поиск</a></div>
-          <div class="login"><a href="login.html">Вход</a></div>
+          <div class="search">
+            <a href="search.html">Поиск</a>
+            <!-- Поиск -->
+            <div class="section-search">
+              <form class="form-search" aria-label="Поиск на сайте">
+                <label class="visually-hidden">
+                  Ключевое слово
+                  <input class="search-phrase" type="text"
+                          placeholder="Что ищем?" name="keyword">
+                </label>
+                <!-- Круглая ссылка с лупой на страницу результата поиска -->
+                <a class="btn-search" href="#">Поиск</a>
+              </form>
+            </div>
+          </div>
+          <div class="login">
+            <a href="login.html">Вход</a>
+            <!-- Вход -->
+            <div class="login">
+              <form class="login-form" aria-label="Введите электронную почту и пароль"
+                    method="post">
+                <p>
+                  <label class="visually-hidden">
+                    Электронная почта
+                    <input class="login-email" type="text"
+                            placeholder="Электронная почта"
+                            name="email">
+                  </label>
+                </p>
+                <p>
+                  <label class="visually-hidden">
+                    Пароль
+                    <input class="login-password" type="password"
+                            placeholder="Пароль"
+                            name="password">
+                  </label>
+                </p>
+                <button class="btn" type="submit">Войти</button>
+                <p class="email-password-info">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </p>
+              </form>
+            </div>
+          </div>
           <div class="basket"><a href="basket.html">Пусто</a></div>
         </div>
       </nav>
@@ -39,95 +91,6 @@
     <!-- Уникальный раздел страницы -->
     <main class="container">
       <h1 class="visually-hidden">Магазин «Глейси»</h1>
-
-      <!-- Главное меню -->
-      <section class="new-items">
-        <h2>Новинки</h2>
-        <ul>
-          <li class="new-item"><a href="catalog.html">Сливочное</a></li>
-          <li class="new-item"><a href="catalog.html">Щербеты</a></li>
-          <li class="new-item"><a href="catalog.html">Фруктовый лед</a></li>
-          <li class="new-item"><a href="catalog.html">Мелорин</a></li>
-        </ul>
-      </section>
-
-      <!-- Вход -->
-      <section class="login">
-        <h2 class="visually-hidden">Личный кабинет</h2>
-        <form class="login-form" aria-label="Введите электронную почту и пароль"
-              method="post">
-          <p>
-            <label class="visually-hidden">
-              Электронная почта
-              <input class="login-email" type="text"
-                      placeholder="Электронная почта"
-                      name="email">
-            </label>
-          </p>
-          <p>
-            <label class="visually-hidden">
-              Пароль
-              <input class="login-password" type="password"
-                      placeholder="Пароль"
-                      name="password">
-            </label>
-          </p>
-          <button class="btn" type="submit">Войти</button>
-          <p class="email-password-info">
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Новая регистрация</a>
-          </p>
-        </form>
-      </section>
-
-      <!-- Поиск -->
-      <section class="search">
-        <h2 class="visually-hidden">Поиск на сайте</h2>
-        <form class="form-search" >
-          <label class="visually-hidden">
-            Ключевое слово
-            <input class="search-phrase" type="text"
-                    placeholder="Что ищем?" name="keyword">
-          </label>
-          <!-- Круглая ссылка с лупой на страницу результата поиска -->
-          <a class="btn-search" href="#">Поиск</a>
-        </form>
-      </section>
-
-      <!-- Обратная связь -->
-      <section class="feedback">
-        <h2>Мы обязательно вам ответим!</h2>
-        <form class="form-feedback" method="post">
-          <p>
-            <label class="visually-hidden">
-              Имя
-              <input class="feedback-name" type="text"
-                      placeholder="Как вас зовут?" name="name">
-            </label>
-          </p>
-          <p>
-            <label class="visually-hidden">
-              Электронная почта
-              <input class="feedback-email" type="text"
-                      placeholder="Как вас зовут?" name="email">
-            </label>
-          </p>
-          <p>
-            <label class="visually-hidden">
-              Напишите ваши пожелания!
-              <textarea class="feedback-text"
-                        placeholder="Напишите что-нибудь..."
-                        name="wishes">
-              </textarea>
-            </label>
-          </p>
-          <button class="btn" type="submit">
-            Отправить
-          </button>
-        </form>
-        <button class="btn-close" type="button">Закрыть</button>
-      </section>
-
       <section class="promo">
         <h2 class="visually-hidden">Сеты мороженого</h2>
 
@@ -182,6 +145,7 @@
               <b>310 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-2.jpg" width="267" height="267"
@@ -195,6 +159,7 @@
               <b>380 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-3.jpg" width="267" height="267"
@@ -208,6 +173,7 @@
               <b>355 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/product-4.jpg" width="267" height="267"
@@ -221,6 +187,7 @@
               <b>415 ₽</b>
               <span>/кг</span>
             </p>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -342,5 +309,39 @@
         </p>
       </div>
     </footer>
+
+    <!-- Обратная связь -->
+    <section class="feedback">
+      <h2>Мы обязательно вам ответим!</h2>
+      <form class="form-feedback" method="post">
+        <p>
+          <label class="visually-hidden">
+            Имя
+            <input class="feedback-name" type="text"
+                    placeholder="Как вас зовут?" name="name">
+          </label>
+        </p>
+        <p>
+          <label class="visually-hidden">
+            Электронная почта
+            <input class="feedback-email" type="text"
+                    placeholder="Как вас зовут?" name="email">
+          </label>
+        </p>
+        <p>
+          <label class="visually-hidden">
+            Напишите ваши пожелания!
+            <textarea class="feedback-text"
+                      placeholder="Напишите что-нибудь..."
+                      name="wishes">
+            </textarea>
+          </label>
+        </p>
+        <button class="btn" type="submit">
+          Отправить
+        </button>
+      </form>
+      <button class="btn-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
