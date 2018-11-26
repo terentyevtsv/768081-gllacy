@@ -129,10 +129,105 @@
         </ul>
       </nav>
 
-      <!-- Фильтры пропускаем -->
+      <!-- Фильтр -->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form class="form-filter" method="get">
+          <fieldset class="sort">
+            <legend>Сортировка:</legend>
+            <select class="sort-kind">
+              <option value="popular" selected>по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat">по жирности</option>
+            </select>
+          </fieldset>
+
+          <!-- Здесь должен быть спин по выбору диапазона цен. -->
+
+          <fieldset class="fat-content">
+            <legend>Жирность:</legend>
+            <ul>
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-radio"
+                          name="fat-percent" value="zero" type="radio">
+                  0%
+                </label>
+              </li>
+
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-radio"
+                          name="fat-percent" value="before-ten" type="radio" checked>
+                  до 10%
+                </label>
+              </li>
+
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-radio"
+                          name="fat-percent" value="before-thirty" type="radio">
+                  до 30%
+                </label>
+              </li>
+
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-radio"
+                          name="fat-percent" value="above-thirty" type="radio">
+                  выше 30%
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="fillers">
+            <legend>Наполнители:</legend>
+            <ul>
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-checkbox"
+                          name="chocolate" type="checkbox" checked>
+                  шоколадные
+                </label>
+              </li>
+
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-checkbox"
+                          name="sugar-powders" type="checkbox" checked>
+                  сахарные присыпки
+                </label>
+              </li>
+
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-checkbox"
+                          name="fruits" type="checkbox">
+                  фрукты
+                </label>
+              </li>
+
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-checkbox"
+                          name="syrups" type="checkbox">
+                  сиропы
+                </label>
+              </li>
+
+              <li class="filter-option">
+                <label>
+                  <input class="visually-hidden filter-input filter-input-checkbox"
+                          name="jams" type="checkbox">
+                  джемы
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="btn-filter" type="submit">Применить</button>
+        </form>
       </section>
 
       <!-- Каталог мороженого -->
@@ -309,8 +404,7 @@
           </li>
         </ul>
 
-        <!-- Пока что не надо -->
-        <ul class="pagination-list">
+        <ul class="pagination-list" aria-label="Страницы списка мороженого">
           <li class="pagination-item">
             <button class="btn-arrow-left" type="button" disabled>
               Назад
