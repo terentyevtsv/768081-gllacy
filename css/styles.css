@@ -22,6 +22,19 @@ a {
   border-bottom: 1px solid #ffffff;
 }
 
+a:hover,
+a:active{
+  color: #ffbc9e;
+  border-bottom-color: #ffbc9e;
+}
+
+h1 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
 /* Поиск, Вход, Пусто */
 .user-navigation a {
   font-size: 14px;
@@ -40,12 +53,230 @@ a {
   list-style: none;
 }
 
+/* Корзина */
+.basket a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+
+  border-bottom: none;
+}
+
+.full-basket a {
+  color: #323232;
+}
+
+.empty-basket a {
+  color: #ffffff;
+}
+
+/* Контакты и время работы */
+.contacts {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.contacts span {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs li {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.breadcrumbs-current {
+  color: #ffffff;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item:hover {
+  border-radius: 5px;
+  background-color: rgb(248, 247, 244);
+  opacity: 0.2;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* Цена */
+.price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.price span {
+  font-size: 30px;
+}
+
 /* Преимущества */
 .features {
+  background-color: #ebdec4;
   background-image: url("../img/wafer.jpg");
   background-repeat: repeat;
 }
 
+.features-list {
+  list-style: none;
+}
+
+/* Новое в нашем блоге */
+.news {
+  background-color: #ffffff;
+  background-image: url("../img/srawberry.jpg");
+  background-repeat: no-repeat;
+}
+
+.news a {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+
+  border-bottom-color: #323232;
+}
+
+.news a:hover,
+.news a:active{
+  color: #e84d37;
+  border-bottom-color: #fdeeeb;
+}
+
+.navigation-item > a:not(.active):hover {
+  color: #323232;
+
+  background-color: rgb(247, 246, 243);
+  border-bottom: none;
+}
+
+.navigation-item > a:not(.active):active {
+  color: #323232;
+
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  border-bottom: none;
+}
+
+.navigation-item > .active {
+  color: #ffffff;
+
+  background-color: rgb(208, 112, 88);
+  border-bottom: none;
+}
+
+.news h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+/* Подписка */
+.subscription {
+  background-color: #f8f7f4;
+}
+
+.subscription-email input {
+  font: inherit;
+
+  background-color: #ffffff;
+  border: 1px solid #b2b2b2;
+}
+
+.location {
+  background-color: #ffffff;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+}
+
+.shop-info {
+  background-color: #ffffff;
+}
+
+.shop-info h3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.shop-info p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+/* Списки соц. сетей и списки ссылок на документы */
+.footer-social,
+.document-list {
+  list-style: none;
+}
+
+.document-list a {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.document-list li:first-child a {
+  font-weight: 700;
+}
+
+/* Авторские права */
+.footer-copyright {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #fefefe;
+}
+
+.footer-copyright a{
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.footer-logo a,
+.main-header-logo {
+  border-bottom: none;
+}
+
+.btn {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background-image:  linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  border-bottom: none;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+}
+
+.btn:active {
+  background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+.promo-controls .btn {
+  font-size: 32px;
+  line-height: 44px;
+}
 
 .section-login,
 .section-search,
