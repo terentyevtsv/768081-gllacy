@@ -21,10 +21,245 @@ body {
   list-style: none;
 }
 
-.navigation-item {
+/* Ссылки/элементы главного меню
+магазина (Каталог, Доставка и оплата,
+О Компании) */
+.menu-item {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: #ffffff;
-  text-decoration: underline;
+}
+
+/* Ссылки главного меню при наведении */
+.menu-item:hover {
+  color: #323232;
+  background-color: rgb(247, 246, 243);
+  text-decoration: none;
+}
+
+/* Ссылки главного меню при нажатии */
+.menu-item:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+/* Активная ссылка Каталог на странице каталога */
+.menu-item-active {
+  background-color: rgb(208, 112, 88);
+  text-decoration: none;
+}
+
+/* Ссылки поиска, формы логина и корзины */
+.search,
+.login,
+.basket {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+/* Наведение на ссылки поиска, формы логина и корзины */
+.search:hover,
+.login:hover,
+.basket:hover {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+/* Стиль корзины с товарами */
+.full-basket {
+  color: #323232;
+  background-color: #f7f6f3;
+}
+
+/* Контакты и время работы */
+.contacts {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Главный заголовок сайта */
+.shop-name {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Названия сетов из 2 мороженых */
+.set-name {
+  font-size: 60px;
+  line-height: 60.35px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Фоны сетов */
+.set-1,
+.set-2,
+.set-3 {
+  background-repeat:  no-repeat;
+}
+
+.set-1 {
+  background-image: url("../img/set-1.png");
+}
+
+.set-2 {
+  background-image: url("../img/set-2.png");
+}
+
+.set-3 {
+  background-image: url("../img/set-3.png");
+}
+
+/* Кнопки и ссылки в виде кнопок */
+.btn {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+
+  background-image:  linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+}
+
+.btn:active {
+  background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+/* Ссылка на сет из двух мороженых */
+.btn-set {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+/* Список предложений */
+.offer-list {
+  list-style: none;
+}
+
+.offer-item {
+  background-repeat: no-repeat;
+}
+
+.offer-raspberry {
+  background-image: url("../img/raspberries.jpg");
+}
+
+.offer-chocolate {
+  background-image: url("../img/chocolate.jpg");
+}
+
+.offer-header {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.offer-description {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Стили каталога */
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item:hover {
+  border-radius: 5px;
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.item-reference {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Цена */
+.price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.kilo {
+  font-size: 30px;
+}
+
+/* Стили фильтров */
+.sort,
+.fat-content,
+.fillers {
+  border: none;
+}
+
+.filter-header {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.filter-value {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Значения по фильтру */
+.options {
+  list-style: none;
+}
+
+/* Селектор */
+.sort-kind {
+  background-color: rgba(248, 247, 244, 0.2);
+}
+
+.sort-kind:hover {
+  color: #323232;
+}
+
+.option-item {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.btn-filter {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-filter:hover {
+  color: #323232;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-filter:active {
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
 }
