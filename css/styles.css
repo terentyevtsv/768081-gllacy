@@ -1,91 +1,76 @@
+/* Основное оформление */
+.section-login,
+.section-search,
+.sub-catalog,
+.feedback,
+.section-basket {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
 
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-  color: #323232;
-  text-transform: none;
-
   background-color: #849d8f;
 }
 
-a {
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
-  color: #ffffff;
-
-  border-bottom: 1px solid #ffffff;
-}
-
-a:hover,
-a:active{
-  color: #ffbc9e;
-  border-bottom-color: #ffbc9e;
-}
-
-h1 {
-  font-size: 35px;
-  line-height: 41px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-/* Поиск, Вход, Пусто */
-.user-navigation a {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
-}
-
+/* Главное меню навигации по магазину */
+/* Список из главного меню */
 .site-navigation {
+  list-style: none;
+}
+
+/* Ссылки/элементы главного меню
+магазина (Каталог, Доставка и оплата,
+О Компании) */
+.menu-item {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: #ffffff;
-
-  background-color: #849d8f;
-
-  list-style: none;
 }
 
-/* Состояние пустой корзины, входа и поиска по умолчанию */
-.empty-basket > a,
-.login > a,
-.search > a {
+/* Ссылки главного меню при наведении */
+.menu-item:hover {
+  color: #323232;
+  background-color: rgb(247, 246, 243);
+  text-decoration: none;
+}
+
+/* Ссылки главного меню при нажатии */
+.menu-item:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+/* Активная ссылка Каталог на странице каталога */
+.menu-item-active {
+  background-color: rgb(208, 112, 88);
+  text-decoration: none;
+}
+
+/* Ссылки поиска, формы логина и корзины */
+.search,
+.login,
+.basket {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
-
-  border-bottom: none;
+  text-decoration: none;
 }
 
-/* Состояние пустой корзины, входа и поиска при наведении курсора */
-.login > a:hover,
-.search > a:hover,
-.empty-basket > a:hover
- {
+/* Наведение на ссылки поиска, формы логина и корзины */
+.search:hover,
+.login:hover,
+.basket:hover {
   color: #323232;
   background-color: #f8f7f4;
 }
 
-/* Корзина */
-.basket > a {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
-
-  border-bottom: none;
-}
-
-.full-basket a {
+/* Стиль корзины с товарами */
+.full-basket {
   color: #323232;
   background-color: #f7f6f3;
-  /* background-image: url(../img/basket-red.svg);
-  background-repeat: no-repeat; */
 }
 
 /* Контакты и время работы */
@@ -96,203 +81,51 @@ h1 {
   color: #ffffff;
 }
 
-.contacts span {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-/* Хлебные крошки */
-.breadcrumbs {
-  list-style: none;
-}
-
-.breadcrumbs a,
-.breadcrumbs li {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 400;
-}
-
-.breadcrumbs-current {
-  color: #ffffff;
-}
-
-.catalog-list {
-  list-style: none;
-}
-
-.catalog-item:hover {
-  border-radius: 5px;
-  background-color: rgba(248, 247, 244, 0.2);
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-}
-
-/* Цена */
-.price {
-  font-size: 45px;
-  line-height: 45px;
+/* Главный заголовок сайта */
+.shop-name {
+  font-size: 35px;
+  line-height: 41px;
   font-weight: 700;
   color: #ffffff;
 }
 
-.price span {
-  font-size: 30px;
-}
-
-/* Преимущества */
-.features {
-  background-color: #ebdec4;
-  background-image: url("../img/wafer.jpg");
-  background-repeat: repeat;
-}
-
-.features-list {
-  list-style: none;
-}
-
-/* Новое в нашем блоге */
-.news {
-  background-color: #ffffff;
-  background-image: url("../img/srawberry.jpg");
-  background-repeat: no-repeat;
-}
-
-.news a {
-  font-size: 24px;
-  line-height: 30px;
+/* Названия сетов из 2 мороженых */
+.set-name {
+  font-size: 60px;
+  line-height: 60.35px;
   font-weight: 700;
-  color: #323232;
-
-  border-bottom-color: #323232;
-}
-
-.news a:hover,
-.news a:active{
-  color: #e84d37;
-  border-bottom-color: #fdeeeb;
-}
-
-.navigation-item > a:hover {
-  color: #323232;
-
-  background-color: rgb(247, 246, 243);
-  border-bottom: none;
-}
-
-.navigation-item > a:active {
-  color: #323232;
-
-  background-color: rgba(248, 247, 244, 0.988);
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
-  border-bottom: none;
-}
-
-.navigation-item > .active {
   color: #ffffff;
-
-  background-color: rgb(208, 112, 88);
-  border-bottom: none;
 }
 
-.news h2 {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
+/* Фоны сетов */
+.set-1,
+.set-2,
+.set-3 {
+  background-repeat:  no-repeat;
 }
 
-/* Подписка */
-.subscription {
-  background-color: #f8f7f4;
+.set-1 {
+  background-image: url("../img/set-1.png");
 }
 
-.subscription-email input {
-  font: inherit;
-
-  background-color: #ffffff;
-  border: 1px solid #b2b2b2;
+.set-2 {
+  background-image: url("../img/set-2.png");
 }
 
-.location {
-  background-color: #ffffff;
-  background-image: url("../img/map.jpg");
-  background-repeat: no-repeat;
+.set-3 {
+  background-image: url("../img/set-3.png");
 }
 
-.shop-info {
-  background-color: #ffffff;
-}
-
-.shop-info h3 {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.shop-info p {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-}
-
-/* Списки соц. сетей и списки ссылок на документы */
-.footer-social,
-.document-list {
-  list-style: none;
-}
-
-/* Обычное состояние ссылки соц сети */
-.footer-social a {
-  background-color: #e6ebe9;
-}
-
-/* состояние ссылки соц сети при наведении курсора */
-.footer-social a:hover {
-  background-color: #ffffff;
-}
-
-/* состояние ссылки соц сети при нажатии */
-.footer-social a:active {
-  background-color: #e9e9e9;
-}
-
-.document-list a {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.document-list li:first-child a {
-  font-weight: 700;
-}
-
-/* Авторские права */
-.footer-copyright {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
-  color: #fefefe;
-}
-
-.footer-copyright a{
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.footer-logo a,
-.main-header-logo {
-  border-bottom: none;
-}
-
+/* Кнопки и ссылки в виде кнопок */
 .btn {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
+  text-decoration: none;
 
   background-image:  linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  border-bottom: none;
 }
 
 .btn:hover {
@@ -305,35 +138,358 @@ h1 {
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
-.promo-controls .btn {
+/* Ссылка на сет из двух мороженых */
+.btn-set {
   font-size: 32px;
   line-height: 44px;
 }
 
-/* Обычное состояние поля ввода */
-input[type="text"] {
+/* Список предложений */
+.offer-list {
+  list-style: none;
+}
+
+.offer-item {
+  background-repeat: no-repeat;
+}
+
+.offer-raspberry {
+  background-image: url("../img/raspberries.jpg");
+}
+
+.offer-chocolate {
+  background-image: url("../img/chocolate.jpg");
+}
+
+.offer-header {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.offer-description {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Стили каталога */
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item:hover {
+  border-radius: 5px;
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.item-reference {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+/* Цена */
+.price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.kilo {
+  font-size: 30px;
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.breadcrumbs-item-current {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Заголовок страницы каталога */
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Стили фильтров */
+.sort,
+.fat-content,
+.fillers {
+  border: none;
+}
+
+.filter-header {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.filter-value {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Значения по фильтру */
+.options {
+  list-style: none;
+}
+
+/* Селектор */
+.sort-kind {
+  background-color: rgba(248, 247, 244, 0.2);
+}
+
+.sort-kind:hover {
+  color: #323232;
+}
+
+.option-item {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.btn-filter {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-filter:hover {
+  color: #323232;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-filter:active {
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+/* Преимущества */
+.features {
+  background-color: #ebdec4;
+  background-image: url("../img/wafer.jpg");
+  background-repeat: repeat;
+}
+
+.glacy-shop {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.feature-item {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #323232;
+}
+
+/* Новое в нашем блоге */
+.news {
+  background-color: #ffffff;
+  background-image: url("../img/srawberry.jpg");
+  background-repeat: no-repeat;
+}
+
+.news-header {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.news-article {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+}
+
+.news-article:hover,
+.news-article:active{
+  color: #e84d37;
+}
+
+/* Подписка */
+.subscription {
+  background-color: #f8f7f4;
+}
+
+.subscription-offer {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #5a5a5a;
+}
+
+/* Стили полей ввода */
+.input-style {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
   color: #323232;
 
-  border: 1px solid #b2b2b2;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(178, 178, 178);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.52;
 }
 
-/* Поле ввода при наведении */
-input[type="text"]:hover {
-  border: 2px solid #9a9a9a;
+.input-style::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
 }
 
-/* Поле ввода с курсором внутри */
-input[type="text"]:active {
-  border: 2px solid #2e88e4;
+.input-style:hover {
+  border-width: 2px;
+  border-color: rgb(154, 154, 154);
 }
 
-.section-login,
-.section-search,
-.sub-catalog,
-.feedback,
-.section-basket {
-  display: none;
+.input-style:focus {
+  border-color: rgb(46, 136, 228);
+}
+
+.location {
+  background-color: #ffffff;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+}
+
+.shop-info {
+  background-color: #ffffff;
+}
+
+.address,
+.phone {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.address-value,
+.phone-value {
+  color: #323232;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.address-value {
+  line-height: 24px;
+}
+
+.phone-value {
+  line-height: 22px;
+}
+
+.time-value {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+/* Страницы каталога */
+.pagination-list {
+  list-style: none;
+}
+
+.page {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.page:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.current-page,
+.page:active {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+/* Списки соц. сетей и списки ссылок на документы */
+.footer-social,
+.document-list {
+  list-style: none;
+}
+
+.social-site {
+  background-color: #e6ebe9;
+}
+
+.social-site:hover {
+  background-color: #ffffff;
+}
+
+.social-site:active {
+  background-color: #e9e9e9;
+}
+
+.document-site {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.provider-document-site {
+  font-weight: 700;
+}
+
+/* Авторские права */
+.footer-copyright {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #fefefe;
+}
+
+.intensive-site {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+/* Белые ссылки на зеленом фоне */
+.white-references {
+  color: #ffffff;
+}
+
+.white-references:hover,
+.white-references:active {
+  color: #ffbc9e;
 }
