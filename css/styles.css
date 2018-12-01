@@ -489,6 +489,7 @@ body {
   color: #ffffff;
 }
 
+/* Те же ссылки только с учетом наведения курсора мыши и нажатия на ссылку. */
 .white-references:hover,
 .white-references:active {
   color: #ffbc9e;
