@@ -127,32 +127,34 @@
 
       <!-- Параграф вытащил из навигации -->
       <p class="contacts">
-        <span>С 10 до 20, ежедневно</span>
+        <span class="work-time">С 10 до 20, ежедневно</span>
         8 812 450-25-25
       </p>
     </header>
 
     <!-- Основная часть каталога -->
     <main class="container">
-      <!-- Заголовок страницы с навигацией Хлебные крошки -->
-      <h1 class="page-title">Сливочное мороженое</h1>
-      <nav>
-        <ul class="breadcrumbs">
-          <li>
-            <a class="breadcrumbs-item white-references" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li>
-            <a class="breadcrumbs-item white-references" href="catalog.html">
-              Каталог
-            </a>
-          </li>
-          <li class="breadcrumbs-item breadcrumbs-item-current">
-            Сливочное
-          </li>
-        </ul>
-      </nav>
+      <div class="breadcrumb-container">
+        <!-- Заголовок страницы с навигацией Хлебные крошки -->
+        <h1 class="page-title">Сливочное мороженое</h1>
+        <nav class="breadcrumbs-navigation">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-reference white-references" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-reference white-references" href="catalog.html">
+                Каталог
+              </a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-reference breadcrumbs-reference-current">
+              Сливочное
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <!-- Фильтр -->
       <section class="filters">

@@ -13,12 +13,44 @@ body {
 
   font-family: "Roboto", Arial, sans-serif;
   background-color: #849d8f;
+
+  /* Временно для сетки */
+  /* background-image: url('../img/gllacy-index.jpg');
+  background-size: 1200px auto;
+  background-position: top center;
+  background-repeat: no-repeat; */
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 1146px;
+  margin: 0 auto;
+  padding-top: 10px;
+  min-height: 120px;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Главное меню навигации по магазину */
 /* Список из главного меню */
 .site-navigation {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  min-height: 50px;
+  width: 370px;
+}
+
+.user-navigation {
+  min-height: 50px;
+  width: 250px;
 }
 
 /* Ссылки/элементы главного меню
@@ -78,7 +110,23 @@ body {
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
+  text-align: end;
   color: #ffffff;
+
+  width: 168px;
+  align-self: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.work-time {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 /* Главный заголовок сайта */
@@ -177,7 +225,23 @@ body {
 
 /* Стили каталога */
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-item {
+  min-height: 325px;
+  width: 267;
+  margin-bottom: 40px;
+  margin-right: 26px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .catalog-item:hover {
@@ -205,17 +269,33 @@ body {
 }
 
 /* Хлебные крошки */
+.breadcrumb-container {
+  display: flex;
+  flex-direction: column
+}
+
+.breadcrumbs-navigation {
+  order: 1;
+  margin-bottom: 0 0 10 0px;
+}
+
 .breadcrumbs {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs-item {
+  display: inline-block;
+}
+
+.breadcrumbs-reference {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
 }
 
-.breadcrumbs-item-current {
+.breadcrumbs-reference-current {
   text-decoration: none;
   color: #ffffff;
 }
@@ -226,6 +306,9 @@ body {
   line-height: 41px;
   font-weight: 700;
   color: #ffffff;
+
+  order: 2;
+  margin: 0;
 }
 
 /* Стили фильтров */
@@ -292,6 +375,9 @@ body {
   background-color: #ebdec4;
   background-image: url("../img/wafer.jpg");
   background-repeat: repeat;
+
+  width: 1146px;
+  margin: 0 auto 40px auto;
 }
 
 .glacy-shop {
@@ -312,11 +398,21 @@ body {
   color: #323232;
 }
 
+.education {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1146px;
+  margin: 0 auto 40px auto;
+}
+
 /* Новое в нашем блоге */
 .news {
   background-color: #ffffff;
   background-image: url("../img/srawberry.jpg");
   background-repeat: no-repeat;
+
+  width: 560px;
 }
 
 .news-header {
@@ -340,6 +436,7 @@ body {
 /* Подписка */
 .subscription {
   background-color: #f8f7f4;
+  width: 560px;
 }
 
 .subscription-offer {
@@ -381,13 +478,21 @@ body {
 }
 
 .location {
+  display: flex;
+  justify-content: flex-end;
+
   background-color: #ffffff;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .shop-info {
   background-color: #ffffff;
+  width: 302px;
+
+  margin: 62px 27px 62px 0;
 }
 
 .address,
@@ -443,6 +548,21 @@ body {
 }
 
 /* Списки соц. сетей и списки ссылок на документы */
+.footer-social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  min-height: 60px;
+  width: 188px;
+}
+
+.documents {
+  margin: 0;
+  min-height: 60px;
+  width: 330px;
+}
+
 .footer-social,
 .document-list {
   list-style: none;
@@ -471,6 +591,12 @@ body {
 }
 
 /* Авторские права */
+.author {
+  margin: 0;
+  min-height: 60px;
+  width: 190px;
+}
+
 .footer-copyright {
   font-size: 12px;
   line-height: 18px;
@@ -494,3 +620,15 @@ body {
 .white-references:active {
   color: #ffbc9e;
 }
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1146px;
+  margin: 18px auto 0 auto;
+  padding: 18px 0 25px 0;
+
+  min-height: 85px;
+}
+
