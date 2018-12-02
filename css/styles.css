@@ -30,13 +30,11 @@ body {
   margin: 0 auto;
   padding-top: 10px;
   min-height: 120px;
-  outline: 1px solid blue;
 }
 
 .main-navigation {
   display: flex;
   justify-content: space-between;
-  outline: 1px solid red;
 }
 
 /* Главное меню навигации по магазину */
@@ -115,7 +113,6 @@ body {
   text-align: end;
   color: #ffffff;
 
-  outline: 1px solid green;
   width: 168px;
   align-self: flex-end;
   padding: 0;
@@ -125,6 +122,11 @@ body {
 .work-time {
   font-size: 14px;
   line-height: 16px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 /* Главный заголовок сайта */
@@ -223,7 +225,23 @@ body {
 
 /* Стили каталога */
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-item {
+  min-height: 325px;
+  width: 267;
+  margin-bottom: 40px;
+  margin-right: 26px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .catalog-item:hover {
@@ -251,17 +269,33 @@ body {
 }
 
 /* Хлебные крошки */
+.breadcrumb-container {
+  display: flex;
+  flex-direction: column
+}
+
+.breadcrumbs-navigation {
+  order: 1;
+  margin-bottom: 0 0 10 0px;
+}
+
 .breadcrumbs {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs-item {
+  display: inline-block;
+}
+
+.breadcrumbs-reference {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
 }
 
-.breadcrumbs-item-current {
+.breadcrumbs-reference-current {
   text-decoration: none;
   color: #ffffff;
 }
@@ -272,6 +306,9 @@ body {
   line-height: 41px;
   font-weight: 700;
   color: #ffffff;
+
+  order: 2;
+  margin: 0;
 }
 
 /* Стили фильтров */
@@ -591,7 +628,6 @@ body {
   width: 1146px;
   margin: 18px auto 0 auto;
   padding: 18px 0 25px 0;
-  outline: 1px solid blue;
 
   min-height: 85px;
 }
