@@ -152,21 +152,14 @@ body {
 
 /* Фоны сетов */
 .slider {
-  display: flex;
-  flex-direction: column;
-
   width: 1146px;
   margin: 0 auto;
-
-  outline: 1px solid blue;
 }
 
 .set-1,
 .set-2,
 .set-3 {
   background-repeat:  no-repeat;
-  height: 724px;
-  width: 1146px;
 }
 
 .set-1 {
@@ -179,6 +172,11 @@ body {
 
 .set-3 {
   background-image: url("../img/set-3.png");
+}
+
+.promo-controls {
+  width: 1146px;
+  margin: 0 auto 40px auto;
 }
 
 /* Кнопки и ссылки в виде кнопок */
