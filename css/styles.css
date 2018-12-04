@@ -129,12 +129,22 @@ body {
   margin: 0 auto;
 }
 
+.inner-page-container {
+  width: 1146px;
+  margin: 0 auto;
+}
+
 /* Главный заголовок сайта */
 .shop-name {
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.promo {
+  width: 1146px;
+  margin: 0 auto 40px auto;
 }
 
 /* Названия сетов из 2 мороженых */
@@ -146,6 +156,10 @@ body {
 }
 
 /* Фоны сетов */
+.slider {
+  margin: 0 auto;
+}
+
 .set-1,
 .set-2,
 .set-3 {
@@ -162,6 +176,10 @@ body {
 
 .set-3 {
   background-image: url("../img/set-3.png");
+}
+
+.promo-controls {
+  margin: 0 auto 40px auto;
 }
 
 /* Кнопки и ссылки в виде кнопок */
@@ -194,11 +212,18 @@ body {
 
 /* Список предложений */
 .offer-list {
+  display: flex;
+  justify-content: space-between;
+
   list-style: none;
+  padding: 0;
+
+  margin: 0 auto 40px auto;
 }
 
 .offer-item {
   background-repeat: no-repeat;
+  width: 560px;
 }
 
 .offer-raspberry {
@@ -223,14 +248,13 @@ body {
   color: #ffffff;
 }
 
-/* Стили каталога */
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
 
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 82px 0;
 }
 
 .catalog-item {
@@ -271,7 +295,8 @@ body {
 /* Хлебные крошки */
 .breadcrumb-container {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  margin: 0 0 30px 0;
 }
 
 .breadcrumbs-navigation {
@@ -312,6 +337,18 @@ body {
 }
 
 /* Стили фильтров */
+.filters {
+  margin: 0 0 40px 0;
+}
+
+.form-filter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 870px;
+}
+
 .sort,
 .fat-content,
 .fillers {
@@ -335,6 +372,12 @@ body {
 /* Значения по фильтру */
 .options {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-option {
+  display: inline-block;
 }
 
 /* Селектор */
@@ -484,7 +527,6 @@ body {
   background-color: #ffffff;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
-  width: 1200px;
   margin: 0 auto;
 }
 
@@ -525,7 +567,12 @@ body {
 
 /* Страницы каталога */
 .pagination-list {
+  display: flex;
+  justify-content: flex-end;
+
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .page {
