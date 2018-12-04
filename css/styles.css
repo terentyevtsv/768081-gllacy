@@ -142,6 +142,11 @@ body {
   color: #ffffff;
 }
 
+.promo {
+  width: 1146px;
+  margin: 0 auto 40px auto;
+}
+
 /* Названия сетов из 2 мороженых */
 .set-name {
   font-size: 60px;
@@ -152,7 +157,6 @@ body {
 
 /* Фоны сетов */
 .slider {
-  width: 1146px;
   margin: 0 auto;
 }
 
@@ -175,7 +179,6 @@ body {
 }
 
 .promo-controls {
-  width: 1146px;
   margin: 0 auto 40px auto;
 }
 
@@ -215,7 +218,6 @@ body {
   list-style: none;
   padding: 0;
 
-  width: 1146px;
   margin: 0 auto 40px auto;
 }
 
@@ -244,12 +246,6 @@ body {
   line-height: 22px;
   font-weight: 700;
   color: #ffffff;
-}
-
-/* Стили каталога */
-.catalog-list-container {
-  width: 1146px;
-  margin: 0 auto 40px auto;
 }
 
 .catalog-list {
@@ -531,7 +527,6 @@ body {
   background-color: #ffffff;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
-  width: 1200px;
   margin: 0 auto;
 }
 
