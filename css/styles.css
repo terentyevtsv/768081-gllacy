@@ -7,6 +7,15 @@
   display: none;
 }
 
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  clip: rect(0, 0, 0, 0);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,30 +36,44 @@ body {
   justify-content: flex-start;
 
   width: 1146px;
-  margin: 0 auto;
-  padding-top: 10px;
-  min-height: 120px;
+  margin: 10px auto 0 auto;
 }
 
 .main-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin: 0px;
 }
 
 /* Главное меню навигации по магазину */
 /* Список из главного меню */
 .site-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   list-style: none;
-  margin: 0;
+  margin: 0 0 9px 10px;
   padding: 0;
 
-  min-height: 50px;
-  width: 370px;
+  min-width: 349px;
+}
+
+.navigation-item {
+  margin-right: 2px;
 }
 
 .user-navigation {
-  min-height: 50px;
-  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px auto;
+
+  width: 245px;
+}
+
+.search-container {
+  margin-left: 0px;
 }
 
 /* Ссылки/элементы главного меню
@@ -61,10 +84,13 @@ body {
   line-height: 18px;
   font-weight: 700;
   color: #ffffff;
+
+  padding: 10px 13px 11px 13px;
 }
 
 /* Ссылки главного меню при наведении */
 .menu-item:hover {
+  border-radius: 16px;
   color: #323232;
   background-color: rgb(247, 246, 243);
   text-decoration: none;
@@ -83,9 +109,28 @@ body {
 }
 
 /* Ссылки поиска, формы логина и корзины */
+.basket {
+  padding: 9px 17px 8px 44px;
+}
+
+.login {
+  padding: 9px 16px 8px 43px;
+}
+
+.search {
+  display: block;
+  padding: 16px;
+}
+
 .search,
 .login,
 .basket {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+
+  border-radius: 16px;
+
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   text-decoration: none;
