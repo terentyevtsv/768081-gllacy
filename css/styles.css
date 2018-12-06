@@ -32,7 +32,7 @@ body {
 
 .main-header {
   width: 1146px;
-  margin: 10px auto 0 auto;
+  margin: 9px auto 0 auto;
 }
 
 .main-navigation {
@@ -46,7 +46,8 @@ body {
 /* Список из главного меню */
 .site-navigation {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
 
   list-style: none;
@@ -64,9 +65,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 10px auto;
+  margin: 0 0 9px auto;
 
   width: 245px;
+}
+
+.user-navigation-catalog {
+  width: 262px;
 }
 
 .search-container {
@@ -77,17 +82,19 @@ body {
 магазина (Каталог, Доставка и оплата,
 О Компании) */
 .menu-item {
+  display: block;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: #ffffff;
 
   padding: 10px 13px 11px 13px;
+  border-radius: 16px;
 }
 
 /* Ссылки главного меню при наведении */
 .menu-item:hover {
-  border-radius: 16px;
   color: #323232;
   background-color: rgb(247, 246, 243);
   text-decoration: none;
@@ -103,6 +110,8 @@ body {
 .menu-item-active {
   background-color: rgb(208, 112, 88);
   text-decoration: none;
+  line-height: 19px;
+  padding: 6px 13px 7px 13px;
 }
 
 /* Ссылки поиска, формы логина и корзины */
@@ -122,6 +131,8 @@ body {
 .search,
 .login,
 .basket {
+  display: block;
+
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -201,12 +212,13 @@ body {
 
   width: 168px;
   padding: 0;
-  margin: -11px 0 0 auto;
+  margin: -10px 0 0 auto;
 }
 
 .work-time {
   font-size: 14px;
   line-height: 16px;
+  font-weight: 700;
 }
 
 .container {
