@@ -159,6 +159,10 @@ body {
   background-position: 0 0;
 }
 
+.basket:hover::before {
+  background-image: url("../img/basket-active.svg")
+}
+
 .login::before {
   content: "";
   position: absolute;
@@ -171,6 +175,10 @@ body {
   background-image: url("../img/entrance.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.login:hover::before {
+  background-image: url("../img/active-entrance.svg");
 }
 
 .search::before {
@@ -186,6 +194,10 @@ body {
   background-image: url("../img/loupe.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.search:hover::before {
+  background-image: url("../img/active-loupe.svg");
 }
 
 /* Наведение на ссылки поиска, формы логина и корзины */
