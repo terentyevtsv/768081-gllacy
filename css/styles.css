@@ -1,7 +1,6 @@
 /* Основное оформление */
 .section-login,
 .section-search,
-.sub-catalog,
 .feedback,
 .section-basket {
   display: none;
@@ -58,6 +57,7 @@ body {
 }
 
 .navigation-item {
+  position: relative;
   margin-right: 2px;
 }
 
@@ -112,6 +112,70 @@ body {
   text-decoration: none;
   line-height: 19px;
   padding: 6px 13px 7px 13px;
+}
+
+/* Подменю */
+.sub-catalog {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 5px 0;
+
+  border-radius: 5px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  position: absolute;
+  top: 47px;
+  right: -20px;
+}
+
+.new-item {
+  padding: 0;
+  margin: 0;
+}
+
+.new-ref {
+  display: block;
+  padding: 12px 5px 11px 21px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  text-decoration: none;
+
+  max-width: 143px;
+  word-break: break-all;
+  letter-spacing: 1px;
+}
+
+.new-ref:hover {
+  background-color: #fbded8;
+}
+
+.new-ref:active {
+  background-color: #f6b5a5;
+}
+
+.active-ref {
+  background-color: #d07058;
+}
+
+.header-new-ref {
+  display: block;
+  padding: 13px 0 15px 15px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #323232;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(235, 234, 231);
+
+  margin: 0 9px 0 6px;
+
+  width: 128px;
 }
 
 /* Ссылки поиска, формы логина и корзины */
