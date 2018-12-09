@@ -1,8 +1,7 @@
 /* Основное оформление */
-.section-login,
-.section-search,
 .feedback,
 .sub-catalog,
+.form-search,
 .section-basket {
   display: none;
 }
@@ -81,6 +80,15 @@ body {
 
 .search-container {
   margin-left: 0px;
+  position: relative;
+}
+
+.search-container:hover .form-search {
+  display: block;
+}
+
+.login-container {
+  position: relative;
 }
 
 /* Ссылки/элементы главного меню
@@ -130,6 +138,9 @@ body {
   position: absolute;
   top: 41px;
   left: -7px;
+
+  box-sizing: border-box;
+  width: 143px;
 }
 
 .new-item {
@@ -162,7 +173,7 @@ body {
 
 .header-new-ref {
   display: block;
-  padding: 11px 57px 10px 15px;
+  padding: 11px 15px 10px 15px;
   margin: 0px 9px 0px 6px;
   font-size: 14px;
   line-height: 16px;
@@ -184,6 +195,62 @@ body {
 .search {
   display: block;
   padding: 16px;
+}
+
+/* форма поиска */
+.form-search {
+  position: absolute;
+  border-radius: 6px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  top: 37px;
+  right: 15px;
+  padding: 20px 15px 20px 15px;
+}
+
+.search-phrase {
+  box-sizing: border-box;
+  width: 310px;
+  padding: 16px 225px 8px 10px;
+  border: 1px solid rgb(211, 211, 210);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.search-phrase::placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #999999;
+}
+
+/* Форма входа */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  position: absolute;
+  border-radius: 6px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  top: 37px;
+  right: 14px;
+  width: 277px;
+}
+
+.block-submit {
+  display: flex;
+  justify-content: space-around;
+}
+
+.login-email,
+.login-password {
+  border: 1px solid rgb(211, 211, 210);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  width: 241px;
 }
 
 .search,
@@ -211,13 +278,17 @@ body {
   height: 20px;
 
   left: 16px;
+  top: 7px;
 
-  background-image: url("../img/basket.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.basket:hover::before {
+.empty-basket::before {
+  background-image: url("../img/basket.svg");
+}
+
+.empty-basket:hover::before {
   background-image: url("../img/basket-active.svg")
 }
 
@@ -229,6 +300,7 @@ body {
   height: 19px;
 
   left: 16px;
+  top: 7px;
 
   background-image: url("../img/entrance.svg");
   background-repeat: no-repeat;
@@ -270,6 +342,10 @@ body {
 .full-basket {
   color: #323232;
   background-color: #f7f6f3;
+}
+
+.full-basket::before {
+  background-image: url("../img/basket-red.svg");
 }
 
 /* Контакты и время работы */
@@ -359,6 +435,30 @@ body {
 
   background-image:  linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+/* кнопка вход */
+.btn-entrance {
+  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+
+
+  width: 100px;
+}
+
+.email-password-info {
+  width: 120px;
+
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #323232;
+}
+
+.new-reg,
+.password-help {
+  color: #323232;
 }
 
 .btn:hover {

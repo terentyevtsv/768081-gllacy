@@ -70,45 +70,53 @@
               <span class="visually-hidden">Поиск</span>
             </a>
             <!-- Поиск -->
-            <div class="section-search">
-              <form class="form-search" aria-label="Поиск на сайте">
-                <label class="visually-hidden">
-                  Ключевое слово
-                  <input class="search-phrase" type="text"
-                          placeholder="Что ищем?" name="keyword">
-                </label>
-              </form>
-            </div>
+            <form class="form-search" aria-label="Поиск на сайте">
+              <label class="visually-hidden" for="search-path">
+                Ключевое слово
+              </label>
+              <input class="search-phrase" type="text"
+                        placeholder="Что ищем?" name="keyword"
+                        id="search-path">
+            </form>
+
           </div>
           <div class="login-container">
             <a class="login" href="login.html">Вход</a>
             <!-- Вход -->
-            <div class="section-login">
-              <form class="login-form" aria-label="Введите электронную почту и пароль"
-                    method="post">
-                <p>
-                  <label class="visually-hidden">
-                    Электронная почта
-                    <input class="login-email" type="text"
-                            placeholder="Электронная почта"
-                            name="email">
-                  </label>
-                </p>
-                <p>
-                  <label class="visually-hidden">
-                    Пароль
-                    <input class="login-password" type="password"
-                            placeholder="Пароль"
-                            name="password">
-                  </label>
-                </p>
-                <button class="btn" type="submit">Войти</button>
+            <form class="login-form" aria-label="Введите электронную почту и пароль"
+                  method="post">
+              <p>
+                <label class="visually-hidden" for="email-id">
+                  Электронная почта
+                </label>
+                <input class="login-email" type="text"
+                      id="email-id"
+                      placeholder="Электронная почта"
+                      name="email">
+              </p>
+              <p>
+                <label class="visually-hidden" for="pass-id">
+                  Пароль
+                </label>
+                <input class="login-password" type="password"
+                      id="pass-id"
+                      placeholder="Пароль"
+                      name="password">
+              </p>
+              <div class="block-submit">
+                <button class="btn btn-entrance" type="submit">
+                  Войти
+                </button>
                 <p class="email-password-info">
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+                  <a class="password-help" href="#">
+                    Забыли пароль?
+                  </a>
+                  <a class="new-reg" href="#">
+                    Новая регистрация
+                  </a>
                 </p>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
           <div class="basket-container">
             <a class="basket full-basket" href="basket.html">
