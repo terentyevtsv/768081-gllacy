@@ -2,6 +2,7 @@
 .feedback,
 .sub-catalog,
 .form-search,
+.login-form,
 .section-basket {
   display: none;
 }
@@ -227,10 +228,6 @@ body {
 
 /* Форма входа */
 .login-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
   position: absolute;
   border-radius: 6px;
   background-color: rgb(248, 247, 244);
