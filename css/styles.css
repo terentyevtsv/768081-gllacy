@@ -2,8 +2,9 @@
 .feedback,
 .sub-catalog-container,
 .form-search-container,
-.form-login-container,
-.section-basket {
+.form-login-container
+/* .section-basket-container { */
+  {
   display: none;
 }
 
@@ -22,12 +23,6 @@ body {
 
   font-family: "Roboto", Arial, sans-serif;
   background-color: #849d8f;
-
-  /* Временно для сетки */
-  /* background-image: url('../img/gllacy-index.jpg');
-  background-size: 1200px auto;
-  background-position: top center;
-  background-repeat: no-repeat; */
 }
 
 .main-header {
@@ -319,8 +314,112 @@ body {
   background-image: url("../img/basket.svg");
 }
 
+.basket-container {
+  position: relative;
+}
+
 .basket-container:hover .empty-basket::before {
   background-image: url("../img/basket-active.svg")
+}
+
+.section-basket {
+  width: 540px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  padding: 20px 0 0 0;
+}
+
+.basket-info {
+  color: #323232;
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+
+  outline: 1px solid;
+  width: 100%;
+}
+
+.per-kg {
+  color: #999999;
+}
+
+.account {
+  text-align: end;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #323232;
+}
+
+.btn-remove {
+  width: 11px;
+  height: 11px;
+
+  border: 0;
+  cursor: pointer;
+
+  background-color: #f8f7f4;
+}
+
+.item-name {
+  position: relative;
+  width: 216px;
+  padding-left: 45px;
+}
+
+.item-name-1::before,
+.item-name-2::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 33px;
+
+  border-radius: 50%;
+
+  content: "";
+}
+
+.item-name-1::before {
+  background-image: url("../img/little-ice-cream1.jpg");
+}
+
+.item-name-2::before {
+  background-image: url("../img/little-ice-cream2.jpg");
+}
+
+.btn-order {
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+  border-radius: 23px;
+  padding: 0px 0px 0px 0px;
+  text-align: end;
+}
+
+/* .catalog-item img {
+  border-radius: 50%;
+} */
+
+.item-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px 10px 0px;
+}
+
+.account-row {
+  border-top: 10px solid #e9e8e5;
+}
+
+.section-basket-container {
+  position: absolute;
+  padding-top: 10px;
+  top: 27px;
+  right: 0px;
+  outline: 1px solid;
 }
 
 .login::before {
@@ -478,9 +577,7 @@ body {
 
 /* кнопка вход */
 .btn-entrance {
-  background-image: linear-gradient(90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  border-radius: 44px;
+  border-radius: 22px;
   padding: 3px 22px 0px 22px;
 }
 
