@@ -1,8 +1,8 @@
 /* Основное оформление */
 .feedback,
-.sub-catalog,
-.form-search,
-.login-form,
+.sub-catalog-container,
+.form-search-container,
+.form-login-container,
 .section-basket {
   display: none;
 }
@@ -62,7 +62,7 @@ body {
   margin-right: 2px;
 }
 
-.navigation-item:hover .sub-catalog {
+.navigation-item:hover .sub-catalog-container {
   display: block;
 }
 
@@ -84,7 +84,7 @@ body {
   position: relative;
 }
 
-.search-container:hover .form-search {
+.search-container:hover .form-search-container {
   display: block;
 }
 
@@ -92,7 +92,7 @@ body {
   position: relative;
 }
 
-.login-container:hover .login-form {
+.login-container:hover .form-login-container {
   display: block;
 }
 
@@ -245,12 +245,9 @@ body {
 .login-form {
   box-sizing: border-box;
 
-  position: absolute;
   border-radius: 6px;
   background-color: rgb(248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  top: 37px;
-  right: 14px;
   width: 277px;
 
   padding: 20px 18px 22px 20px;
@@ -339,6 +336,14 @@ body {
   background-image: url("../img/entrance.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.form-login-container {
+  position: absolute;
+  background-color: transparent;
+  top: 27px;
+  right: 14px;
+  padding-top: 10px;
 }
 
 .login-container:hover .login::before {
