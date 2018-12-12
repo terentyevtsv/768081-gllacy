@@ -133,32 +133,47 @@
                   <caption class="visually-hidden">Выбранное мороженое</caption>
                   <tr class="visually-hidden">
                     <th>Удалить из списка</th>
+                    <th>Изображение</th>
                     <th>Наименование</th>
                     <th>Вес</th>
                     <th>Цена</th>
                   </tr>
-                  <tr class="item-row">
-                    <td>
+                  <tr>
+                    <td class="item-button">
                       <button class="btn-remove" type="button">
                         <img src="img/cross-small.svg" width="11" height="11" alt="Удалить">
                       </button>
                     </td>
-                    <td class="item-name item-name-1">Пломбир с апельсиновым джемом</td>
-                    <td>1,5 кг х <span class="per-kg">200 руб.</span></td>
-                    <td>300 руб.</td>
+                    <td class="item-picture">
+                      <img class="picture"
+                            src="img/little-ice-cream1.jpg"
+                            width="32" height="33"
+                            alt="Пломбир с апельсиновым джемом">
+                    </td>
+                    <td class="item-name">Пломбир с апельсиновым джемом</td>
+                    <td class="item-calculation">1,5 кг х <span class="per-kg">200 руб.</span></td>
+                    <td class="item-price">300 руб.</td>
                   </tr>
-                  <tr class="item-row">
-                    <td>
+                  <tr>
+                    <td class="item-button item-button-2">
                       <button class="btn-remove" type="button">
-                        <img src="img/cross-small.svg" width="11" height="11" alt="Удалить">
+                        <img src="img/cross-small.svg"
+                              width="11" height="11"
+                              alt="Удалить">
                       </button>
+                    </td>
+                    <td class="item-picture item-picture-2">
+                        <img class="picture"
+                              src="img/little-ice-cream2.jpg"
+                              width="32" height="33"
+                              alt="Клубничный пломбир с присыпкой из белого шоколада">
                     </td>
                     <td class="item-name item-name-2">Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td>1,5 кг х <span class="per-kg">300 руб.</span></td>
-                    <td>450 руб.</td>
+                    <td class="item-calculation item-calculation-2">1,5 кг х <span class="per-kg">300 руб.</span></td>
+                    <td class="item-price item-price-2">450 руб.</td>
                   </tr>
-                  <tr class="account-row">
-                    <td class="account" colspan="4">Итого: 750 руб.</td>
+                  <tr>
+                    <td class="account" colspan="5">Итого: 750 руб.</td>
                   </tr>
                 </table>
                 <a class="btn btn-order" href="#">Оформить заказ</a>
@@ -321,7 +336,7 @@
         <h2 class="visually-hidden">Ассортимент мороженого</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <img src="img/product-1.jpg" width="267" height="267"
+            <img class="picture" src="img/product-1.jpg" width="267" height="267"
                   alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -336,7 +351,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-2.jpg" width="267" height="267"
+            <img class="picture" src="img/product-2.jpg" width="267" height="267"
                   alt="Сливочно-кофейное с кусочками шоколада">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -351,7 +366,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-3.jpg" width="267" height="267"
+            <img class="picture" src="img/product-3.jpg" width="267" height="267"
                   alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -366,7 +381,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-4.jpg" width="267" height="267"
+            <img class="picture" src="img/product-4.jpg" width="267" height="267"
                   alt="Сливочное крем-брюле с карамельной подливкой">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -381,7 +396,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-5.jpg" width="267" height="267"
+            <img class="picture" src="img/product-5.jpg" width="267" height="267"
                   alt="Сливочное с брусничным джемом">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -395,7 +410,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-6.jpg" width="267" height="267"
+            <img class="picture" src="img/product-6.jpg" width="267" height="267"
                   alt="Сливочно-черничное с цельными ягодами черники">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -410,7 +425,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-7.jpg" width="267" height="267"
+            <img class="picture" src="img/product-7.jpg" width="267" height="267"
                   alt="Сливочно-лимонное с карамельной присыпкой">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -425,7 +440,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-8.jpg" width="267" height="267"
+            <img class="picture" src="img/product-8.jpg" width="267" height="267"
                   alt="Сливочное с шоколадной стружкой">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -439,7 +454,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-9.jpg" width="267" height="267"
+            <img class="picture" src="img/product-9.jpg" width="267" height="267"
                   alt="Сливочно-ванильное с кусочками шоколада">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -453,7 +468,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-10.jpg" width="267" height="267"
+            <img class="picture" src="img/product-10.jpg" width="267" height="267"
                   alt="Сливочноe с ментоловым сиропом">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -467,7 +482,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-11.jpg" width="267" height="267"
+            <img class="picture" src="img/product-11.jpg" width="267" height="267"
                   alt="Сливочное с кусочками черного шоколада">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
@@ -481,7 +496,7 @@
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
-            <img src="img/product-12.jpg" width="267" height="267"
+            <img class="picture" src="img/product-12.jpg" width="267" height="267"
                   alt="Сливочное с мятным сиропом">
             <h3>
               <a class="item-reference white-references" href="catalog-item.html">
