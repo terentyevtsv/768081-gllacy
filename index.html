@@ -8,6 +8,14 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
+    <input class="check-1 visually-hidden" type="radio"
+            id="product-1" name="toggle" checked>
+    <input class="check-2 visually-hidden" type="radio"
+            id="product-2" name="toggle">
+    <input class="check-3 visually-hidden" type="radio"
+          id="product-3" name="toggle">
+
+    <div class="site-wrapper">
     <!-- Повторяющаяся шапка сайта -->
     <header class="main-header">
       <nav class="main-navigation">
@@ -153,38 +161,46 @@
 
         <!-- Элементы управления промо-акциями -->
         <div class="slider-controls">
-          <label for="product-1">Первый</label>
-          <label for="product-2">Второй</label>
-          <label for="product-3">Третий</label>
+          <label class="marker-1" for="product-1">
+            Первый
+          </label>
+
+          <label class="marker-2" for="product-2">
+            Второй
+          </label>
+
+          <label class="marker-3" for="product-3">
+            Третий
+          </label>
         </div>
 
         <!-- Картинки слайдера будут фоном, т.к.
         они дублируются описанием в параграфе -->
         <ul class="slider-list">
-          <li class="slider-item slide" id="slide1">
-            <h3 class="slide-title">
+          <li class="slider-item slide slide1">
+            <h3 class="slide-title slide-title-1">
               Крем-брюле и пломбир с
               малиновым джемом
             </h3>
-            <a class="button slide-button" href="#">
+            <a class="btn btn-slide" href="#">
               Давайте оба!
             </a>
           </li>
-          <li class="slider-item slide" id="slide2">
-            <h3 class="slide-title">
+          <li class="slider-item slide slide2">
+            <h3 class="slide-title slide-title-2">
               Шоколадный пломбир и
               лимонный сорбет
             </h3>
-            <a class="button slide-button" href="#">
+            <a class="btn btn-slide" href="#">
                 Давайте оба!
             </a>
           </li>
-          <li class="slider-item slide" id="slide3">
-            <h3 class="slide-title">
+          <li class="slider-item slide slide3">
+            <h3 class="slide-title slide-title-3">
               Пломбир с помадкой и
               клубничный щербет
             </h3>
-            <a class="button slide-button" href="#">
+            <a class="btn btn-slide" href="#">
                 Давайте оба!
             </a>
           </li>
@@ -470,5 +486,6 @@
       </form>
       <button class="btn-close" type="button">Закрыть</button>
     </section>
+    </div>
   </body>
 </html>

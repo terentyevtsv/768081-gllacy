@@ -21,12 +21,21 @@ body {
   padding: 0;
 
   font-family: "Roboto", Arial, sans-serif;
+
   background-color: #849d8f;
+}
+
+.site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/set-1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 9px;
 }
 
 .main-header {
   width: 1146px;
-  margin: 9px auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 .main-navigation {
@@ -556,20 +565,98 @@ body {
 .promo {
   width: 1146px;
   margin: 0 auto 40px auto;
+
+  padding-top: 321px;
+
+  text-align: center;
+  color: #ffffff;
+
+  position: relative;
 }
 
 /* Названия сетов из 2 мороженых */
 .slide-title {
   font-size: 60px;
-  line-height: 60.35px;
+  line-height: 60px;
   font-weight: 700;
-  color: #ffffff;
+
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
+
+.slide-title-1 {
+  width: 670px;
+}
+
+.slide-title-2 {
+  width: 648px;
+}
+
+.slide-title-3 {
+  width: 634px;
 }
 
 /* Фоны сетов */
 .slider-list {
-  margin: 0 auto;
-  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.marker-1,
+.marker-2,
+.marker-3 {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+
+  margin-right: 4px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 448px;
+  left: -1px;
+  z-index: 20;
+  font-size: 0;
+}
+
+.slide {
+  display: none;
+}
+
+.check-1:checked ~ .site-wrapper .slide1,
+.check-2:checked ~ .site-wrapper .slide2,
+.check-3:checked ~ .site-wrapper .slide3 {
+  display: block;
+}
+
+.check-1:checked ~ .site-wrapper .marker-1,
+.check-2:checked ~ .site-wrapper .marker-2,
+.check-3:checked ~ .site-wrapper .marker-3 {
+  background-color: #ffffff;
+}
+
+.check-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/set-1.png");
+}
+
+.check-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/set-2.png");
+}
+
+.check-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/set-3.png");
 }
 
 /* Кнопки и ссылки в виде кнопок */
@@ -582,6 +669,15 @@ body {
 
   background-image:  linear-gradient(90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+.btn-slide {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+
+  border-radius: 30px;
+  padding: 12px 44px;
 }
 
 /* кнопка вход */
