@@ -151,51 +151,44 @@
           Сеты мороженого
         </h2>
 
+        <!-- Элементы управления промо-акциями -->
+        <div class="slider-controls">
+          <label for="product-1">Первый</label>
+          <label for="product-2">Второй</label>
+          <label for="product-3">Третий</label>
+        </div>
+
         <!-- Картинки слайдера будут фоном, т.к.
         они дублируются описанием в параграфе -->
-        <div class="slider">
-          <div class="set-1">
-            <p class="set-name">
+        <ul class="slider-list">
+          <li class="slider-item slide" id="slide1">
+            <h3 class="slide-title">
               Крем-брюле и пломбир с
               малиновым джемом
-            </p>
-          </div>
-          <div class="set-2">
-            <p class="set-name">
+            </h3>
+            <a class="button slide-button" href="#">
+              Давайте оба!
+            </a>
+          </li>
+          <li class="slider-item slide" id="slide2">
+            <h3 class="slide-title">
               Шоколадный пломбир и
               лимонный сорбет
-            </p>
-          </div>
-          <div class="set-3">
-            <p class="set-name">
+            </h3>
+            <a class="button slide-button" href="#">
+                Давайте оба!
+            </a>
+          </li>
+          <li class="slider-item slide" id="slide3">
+            <h3 class="slide-title">
               Пломбир с помадкой и
               клубничный щербет
-            </p>
-          </div>
-        </div>
-
-        <!-- Элементы управления промо-акциями -->
-        <div class="promo-controls">
-          <div class="slider-buttons">
-            <label class="visually-hidden">
-              <input type="radio" name="set" value="val-1" checked>
-              Крем-брюле и пломбир с малиновым джемом
-            </label>
-
-            <label class="visually-hidden">
-              <input type="radio" name="set" value="val-2">
-              Шоколадный пломбир и лимонный сорбет
-            </label>
-
-            <label class="visually-hidden">
-              <input type="radio" name="set" value="val-3">
-              Пломбир с помадкой и клубничный щербет
-            </label>
-          </div>
-          <a href="basket.html" class="btn btn-set">
-            Давайте оба!
-          </a>
-        </div>
+            </h3>
+            <a class="button slide-button" href="#">
+                Давайте оба!
+            </a>
+          </li>
+        </ul>
 
         <ul class="offer-list">
           <li class="offer-item offer-raspberry">

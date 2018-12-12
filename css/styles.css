@@ -559,7 +559,7 @@ body {
 }
 
 /* Названия сетов из 2 мороженых */
-.set-name {
+.slide-title {
   font-size: 60px;
   line-height: 60.35px;
   font-weight: 700;
@@ -567,30 +567,9 @@ body {
 }
 
 /* Фоны сетов */
-.slider {
+.slider-list {
   margin: 0 auto;
-}
-
-.set-1,
-.set-2,
-.set-3 {
-  background-repeat:  no-repeat;
-}
-
-.set-1 {
-  background-image: url("../img/set-1.png");
-}
-
-.set-2 {
-  background-image: url("../img/set-2.png");
-}
-
-.set-3 {
-  background-image: url("../img/set-3.png");
-}
-
-.promo-controls {
-  margin: 0 auto 40px auto;
+  display: flex;
 }
 
 /* Кнопки и ссылки в виде кнопок */
@@ -636,12 +615,6 @@ body {
 .btn:active {
   background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
-}
-
-/* Ссылка на сет из двух мороженых */
-.btn-set {
-  font-size: 32px;
-  line-height: 44px;
 }
 
 /* Список предложений */
