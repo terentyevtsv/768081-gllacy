@@ -1,9 +1,9 @@
 /* Основное оформление */
-.section-login,
-.section-search,
-.sub-catalog,
 .feedback,
-.section-basket {
+.sub-catalog-container,
+.form-search-container,
+.form-login-container,
+.section-basket-container {
   display: none;
 }
 
@@ -22,12 +22,6 @@ body {
 
   font-family: "Roboto", Arial, sans-serif;
   background-color: #849d8f;
-
-  /* Временно для сетки */
-  /* background-image: url('../img/gllacy-index.jpg');
-  background-size: 1200px auto;
-  background-position: top center;
-  background-repeat: no-repeat; */
 }
 
 .main-header {
@@ -58,7 +52,12 @@ body {
 }
 
 .navigation-item {
+  position: relative;
   margin-right: 2px;
+}
+
+.navigation-item:hover .sub-catalog-container {
+  display: block;
 }
 
 .user-navigation {
@@ -76,6 +75,19 @@ body {
 
 .search-container {
   margin-left: 0px;
+  position: relative;
+}
+
+.search-container:hover .form-search-container {
+  display: block;
+}
+
+.login-container {
+  position: relative;
+}
+
+.login-container:hover .form-login-container {
+  display: block;
 }
 
 /* Ссылки/элементы главного меню
@@ -94,7 +106,7 @@ body {
 }
 
 /* Ссылки главного меню при наведении */
-.menu-item:hover {
+.navigation-item:hover .menu-item {
   color: #323232;
   background-color: rgb(247, 246, 243);
   text-decoration: none;
@@ -114,6 +126,67 @@ body {
   padding: 6px 13px 7px 13px;
 }
 
+/* Подменю */
+.sub-catalog-container {
+  background-color: transparent;
+  position: absolute;
+  top: 31px;
+  left: -7px;
+  padding-top: 10px;
+}
+
+.sub-catalog {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 8px;
+  border-radius: 5px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+  width: 143px;
+}
+
+.new-item {
+  padding: 0;
+  margin: 0;
+}
+
+.new-ref {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  text-decoration: none;
+  word-break: break-all;
+  padding: 11px 20px 4px 20px;
+}
+
+.new-ref:hover {
+  background-color: #fbded8;
+}
+
+.new-ref:active {
+  background-color: #f6b5a5;
+}
+
+.active-ref {
+  background-color: #d07058;
+}
+
+.header-new-ref {
+  display: block;
+  padding: 11px 15px 10px 15px;
+  margin: 0px 9px 0px 6px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #323232;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(235, 234, 231);
+}
+
 /* Ссылки поиска, формы логина и корзины */
 .basket {
   padding: 9px 17px 8px 44px;
@@ -126,6 +199,83 @@ body {
 .search {
   display: block;
   padding: 16px;
+}
+
+/* форма поиска */
+.form-search-container {
+  position: absolute;
+  top: 27px;
+  right: 6px;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.form-search {
+  border-radius: 6px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  padding: 20px 15px 20px 15px;
+}
+
+.search-phrase {
+  box-sizing: border-box;
+  width: 310px;
+  padding: 16px 225px 8px 10px;
+  border: 1px solid rgb(211, 211, 210);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.search-phrase::placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #999999;
+}
+
+/* Форма входа */
+.login-form {
+  box-sizing: border-box;
+
+  border-radius: 6px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  width: 277px;
+
+  padding: 20px 18px 22px 20px;
+}
+
+/* Отступы между полями ввода */
+.email-param,
+.pass-param {
+  margin: 0 0 19px 0;
+}
+
+.block-submit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 240px
+}
+
+.login-email,
+.login-password {
+  box-sizing: border-box;
+
+  border: 1px solid rgb(211, 211, 210);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  width: 240px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #999999;
+  padding: 7px 13px 12px 13px;
 }
 
 .search,
@@ -153,14 +303,153 @@ body {
   height: 20px;
 
   left: 16px;
+  top: 7px;
 
-  background-image: url("../img/basket.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.basket:hover::before {
+.empty-basket::before {
+  background-image: url("../img/basket.svg");
+}
+
+.basket-container {
+  position: relative;
+}
+
+.basket-container:hover .section-basket-container {
+  display: block;
+}
+
+.basket-container:hover .empty-basket::before {
   background-image: url("../img/basket-active.svg")
+}
+
+.section-basket {
+  width: 540px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  padding: 11px 15px 0px 13px;
+}
+
+.basket-info {
+  color: #323232;
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+
+  width: 100%;
+  margin-bottom: 13px;
+
+  border-collapse: collapse;
+}
+
+.per-kg {
+  color: #999999;
+}
+
+.account {
+  text-align: right;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #323232;
+  padding-top: 14px;
+}
+
+.btn-remove {
+  width: 11px;
+  height: 11px;
+
+  border: 0;
+  cursor: pointer;
+
+  background-color: #f8f7f4;
+  padding: 0;
+}
+
+.item-name {
+  width: 216px;
+  padding: 5px 0px 0px 9px;
+}
+
+.item-name-2 {
+  padding: 25px 10px 0px 6px;
+}
+
+.item-calculation {
+  padding: 4px 4px 0px 22px;
+}
+
+.item-calculation-2 {
+  padding-top: 8px;
+}
+
+.item-picture {
+  padding: 8px 0 0 11px;
+}
+
+.item-picture-2 {
+  padding-top: 11px;
+  padding-left: 13px;
+}
+
+.item-button {
+  padding: 6px 0px 0px 2px;
+}
+
+.item-button-2 {
+  padding-top: 14px;
+}
+
+.item-price {
+  padding: 3px 9px 0 4px;
+}
+
+.item-price-2 {
+  padding-top: 8px;
+}
+
+.item-button-2,
+.item-picture-2,
+.item-name-2,
+.item-calculation-2,
+.item-price-2 {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #cacac7;
+}
+
+.btn-order {
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+  border-radius: 23px;
+  padding: 9px 15px 12px 16px;
+  align-self: flex-end;
+}
+
+.picture {
+  border-radius: 50%;
+}
+
+.section-basket-container {
+  position: absolute;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  top: 27px;
+  right: 0px;
+}
+
+.section-basket {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  padding: 12px 13px 20px 15px;
+  width: 541px;
 }
 
 .login::before {
@@ -171,13 +460,22 @@ body {
   height: 19px;
 
   left: 16px;
+  top: 7px;
 
   background-image: url("../img/entrance.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.login:hover::before {
+.form-login-container {
+  position: absolute;
+  background-color: transparent;
+  top: 27px;
+  right: 14px;
+  padding-top: 10px;
+}
+
+.login-container:hover .login::before {
   background-image: url("../img/active-entrance.svg");
 }
 
@@ -196,14 +494,14 @@ body {
   background-position: 0 0;
 }
 
-.search:hover::before {
+.search-container:hover .search::before {
   background-image: url("../img/active-loupe.svg");
 }
 
 /* Наведение на ссылки поиска, формы логина и корзины */
-.search:hover,
-.login:hover,
-.basket:hover {
+.search-container:hover .search,
+.login-container:hover .login,
+.basket-container:hover .basket {
   color: #323232;
   background-color: #f8f7f4;
 }
@@ -212,6 +510,10 @@ body {
 .full-basket {
   color: #323232;
   background-color: #f7f6f3;
+}
+
+.full-basket::before {
+  background-image: url("../img/basket-red.svg");
 }
 
 /* Контакты и время работы */
@@ -299,8 +601,31 @@ body {
   color: #ffffff;
   text-decoration: none;
 
-  background-image:  linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image:  linear-gradient(90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+/* кнопка вход */
+.btn-entrance {
+  border-radius: 22px;
+  padding: 3px 22px 0px 22px;
+}
+
+.email-password-info {
+  width: 120px;
+
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #323232;
+
+  margin: 0;
+}
+
+.new-reg,
+.password-help {
+  color: #323232;
 }
 
 .btn:hover {
@@ -410,7 +735,7 @@ body {
 
 .breadcrumbs-navigation {
   order: 1;
-  margin-bottom: 0 0 10 0px;
+  margin: 0 0 10px 0px;
 }
 
 .breadcrumbs {

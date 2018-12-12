@@ -19,14 +19,38 @@
         <!-- Навигация по сайту. Здесь независимые разделы сайты. Значит это список -->
         <ul class="site-navigation">
           <li class="navigation-item">
-            <a class="menu-item" href="catalog.html">Каталог</a>
-            <ul class="sub-catalog">
-              <li class="new-item"><a href="#">Новинки</a></li>
-              <li class="new-item"><a href="catalog.html">Сливочное</a></li>
-              <li class="new-item"><a href="#">Щербеты</a></li>
-              <li class="new-item"><a href="#">Фруктовый лед</a></li>
-              <li class="new-item"><a href="#">Мелорин</a></li>
-            </ul>
+            <a class="menu-item" href="catalog.html">
+              Каталог
+            </a>
+            <div class="sub-catalog-container">
+              <ul class="sub-catalog">
+                <li class="new-item">
+                  <a class="header-new-ref" href="#">
+                    Новинки
+                  </a>
+                </li>
+                <li class="new-item">
+                  <a class="new-ref" href="catalog.html">
+                    Сливочное
+                  </a>
+                </li>
+                <li class="new-item">
+                  <a class="new-ref" href="#">
+                    Щербеты
+                  </a>
+                </li>
+                <li class="new-item">
+                  <a class="new-ref" href="#">
+                    Фруктовый лед
+                  </a>
+                </li>
+                <li class="new-item">
+                  <a class="new-ref" href="#">
+                    Мелорин
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="menu-item" href="marketing.html">
@@ -47,14 +71,16 @@
             <a class="search" href="search.html">
               <span class="visually-hidden">Поиск</span>
             </a>
+
             <!-- Поиск -->
-            <div class="section-search">
+            <div class="form-search-container">
               <form class="form-search" aria-label="Поиск на сайте">
-                <label class="visually-hidden">
+                <label class="visually-hidden" for="search-path">
                   Ключевое слово
-                  <input class="search-phrase" type="text"
-                          placeholder="Что ищем?" name="keyword">
                 </label>
+                <input class="search-phrase" type="text"
+                          placeholder="Что ищем?" name="keyword"
+                          id="search-path">
               </form>
             </div>
           </div>
@@ -63,35 +89,44 @@
               Вход
             </a>
             <!-- Вход -->
-            <div class="section-login">
+            <div class="form-login-container">
               <form class="login-form" aria-label="Введите электронную почту и пароль"
                     method="post">
-                <p>
-                  <label class="visually-hidden">
+                <p class="email-param">
+                  <label class="visually-hidden" for="email-id">
                     Электронная почта
-                    <input class="login-email" type="text"
-                            placeholder="Электронная почта"
-                            name="email">
                   </label>
+                  <input class="login-email" type="text"
+                        id="email-id"
+                        placeholder="Электронная почта"
+                        name="email">
                 </p>
-                <p>
-                  <label class="visually-hidden">
+                <p class="pass-param">
+                  <label class="visually-hidden" for="pass-id">
                     Пароль
-                    <input class="login-password" type="password"
-                            placeholder="Пароль"
-                            name="password">
                   </label>
+                  <input class="login-password" type="password"
+                        placeholder="Пароль" id="pass-id"
+                        name="password">
                 </p>
-                <button class="btn" type="submit">Войти</button>
-                <p class="email-password-info">
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
-                </p>
+                <div class="block-submit">
+                  <button class="btn btn-entrance" type="submit">
+                    Войти
+                  </button>
+                  <p class="email-password-info">
+                    <a class="password-help" href="#">
+                      Забыли пароль?
+                    </a>
+                    <a class="new-reg" href="#">
+                      Новая регистрация
+                    </a>
+                  </p>
+                </div>
               </form>
             </div>
           </div>
           <div class="basket-container">
-            <a class="basket" href="basket.html">
+            <a class="basket empty-basket" href="basket.html">
               Пусто
             </a>
           </div>
@@ -185,7 +220,7 @@
         <div class="catalog-list-container">
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img src="img/product-1.jpg" width="267" height="267"
+              <img class="picture" src="img/product-1.jpg" width="267" height="267"
                     alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <h3>
                 <a class="item-reference white-references" href="catalog-item.html">
@@ -200,7 +235,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
-              <img src="img/product-2.jpg" width="267" height="267"
+              <img class="picture" src="img/product-2.jpg" width="267" height="267"
                     alt="Сливочно-кофейное с кусочками шоколада">
               <h3>
                 <a class="item-reference white-references" href="catalog-item.html">
@@ -215,7 +250,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
-              <img src="img/product-3.jpg" width="267" height="267"
+              <img class="picture" src="img/product-3.jpg" width="267" height="267"
                     alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <h3>
                 <a class="item-reference white-references" href="catalog-item.html">
@@ -230,7 +265,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
-              <img src="img/product-4.jpg" width="267" height="267"
+              <img class="picture" src="img/product-4.jpg" width="267" height="267"
                     alt="Сливочное крем-брюле с карамельной подливкой">
               <h3>
                 <a class="item-reference white-references" href="catalog-item.html">
