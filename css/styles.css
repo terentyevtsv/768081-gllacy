@@ -444,6 +444,21 @@ body {
   border-radius: 50%;
 }
 
+.picture-hit::before {
+  content: "";
+  top: 0px;
+  left: 0px;
+
+  width: 61px;
+  height: 61px;
+
+  position: absolute;
+
+  background-image: url("../img/hit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .section-basket-container {
   position: absolute;
   padding-top: 10px;
@@ -566,7 +581,7 @@ body {
   width: 1146px;
   margin: 0 auto 40px auto;
 
-  padding-top: 321px;
+  padding-top: 277px;
 
   text-align: center;
   color: #ffffff;
@@ -581,7 +596,7 @@ body {
   font-weight: 700;
 
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 38px;
 }
 
 .slide-title-1 {
@@ -598,7 +613,7 @@ body {
 
 /* Фоны сетов */
 .slider-list {
-  margin: 0;
+  margin: 0 0 53px 0;
   padding: 0;
 
   list-style: none;
@@ -608,10 +623,10 @@ body {
 .marker-2,
 .marker-3 {
   display: inline-block;
-  width: 21px;
-  height: 21px;
+  width: 18px;
+  height: 18px;
 
-  margin-right: 4px;
+  margin-right: 7px;
 
   vertical-align: top;
 
@@ -622,7 +637,7 @@ body {
 
 .slider-controls {
   position: absolute;
-  top: 448px;
+  top: 447px;
   left: -1px;
   z-index: 20;
   font-size: 0;
@@ -677,7 +692,7 @@ body {
   font-weight: 700;
 
   border-radius: 30px;
-  padding: 12px 44px;
+  padding: 12px 39px;
 }
 
 /* кнопка вход */
@@ -725,8 +740,17 @@ body {
 }
 
 .offer-item {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
   background-repeat: no-repeat;
   width: 560px;
+
+  padding: 16px 0px 0px 19px;
+  text-align: left;
+
+  border-radius: 15px;
 }
 
 .offer-raspberry {
@@ -742,6 +766,8 @@ body {
   line-height: 41px;
   font-weight: 700;
   color: #ffffff;
+  margin: 0;
+  padding: 0 0 15px 0;
 }
 
 .offer-description {
@@ -749,6 +775,9 @@ body {
   line-height: 22px;
   font-weight: 700;
   color: #ffffff;
+
+  margin: 0px 0px 44px 0px;
+  padding: 0;
 }
 
 .catalog-list {
@@ -761,6 +790,8 @@ body {
 }
 
 .catalog-item {
+  position: relative;
+
   min-height: 325px;
   width: 267px;
   margin-bottom: 40px;
@@ -897,6 +928,14 @@ body {
   line-height: 16px;
   font-weight: 400;
   color: #323232;
+}
+
+.btn-jam,
+.btn-chocolate {
+  padding: 11px 22px 9px 22px;
+  align-self: flex-end;
+  margin: 0px 21px 25px 0px;
+  border-radius: 20px;
 }
 
 .btn-filter {
