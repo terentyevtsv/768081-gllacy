@@ -8,6 +8,14 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
+    <input class="check-1 visually-hidden" type="radio"
+            id="product-1" name="toggle" checked>
+    <input class="check-2 visually-hidden" type="radio"
+            id="product-2" name="toggle">
+    <input class="check-3 visually-hidden" type="radio"
+          id="product-3" name="toggle">
+
+    <div class="site-wrapper">
     <!-- Повторяющаяся шапка сайта -->
     <header class="main-header">
       <nav class="main-navigation">
@@ -151,68 +159,73 @@
           Сеты мороженого
         </h2>
 
+        <!-- Элементы управления промо-акциями -->
+        <div class="slider-controls">
+          <label class="marker-1" for="product-1">
+            Первый
+          </label>
+
+          <label class="marker-2" for="product-2">
+            Второй
+          </label>
+
+          <label class="marker-3" for="product-3">
+            Третий
+          </label>
+        </div>
+
         <!-- Картинки слайдера будут фоном, т.к.
         они дублируются описанием в параграфе -->
-        <div class="slider">
-          <div class="set-1">
-            <p class="set-name">
+        <ul class="slider-list">
+          <li class="slider-item slide slide1">
+            <h3 class="slide-title slide-title-1">
               Крем-брюле и пломбир с
               малиновым джемом
-            </p>
-          </div>
-          <div class="set-2">
-            <p class="set-name">
+            </h3>
+            <a class="btn btn-slide" href="#">
+              Давайте оба!
+            </a>
+          </li>
+          <li class="slider-item slide slide2">
+            <h3 class="slide-title slide-title-2">
               Шоколадный пломбир и
               лимонный сорбет
-            </p>
-          </div>
-          <div class="set-3">
-            <p class="set-name">
+            </h3>
+            <a class="btn btn-slide" href="#">
+                Давайте оба!
+            </a>
+          </li>
+          <li class="slider-item slide slide3">
+            <h3 class="slide-title slide-title-3">
               Пломбир с помадкой и
               клубничный щербет
-            </p>
-          </div>
-        </div>
-
-        <!-- Элементы управления промо-акциями -->
-        <div class="promo-controls">
-          <div class="slider-buttons">
-            <label class="visually-hidden">
-              <input type="radio" name="set" value="val-1" checked>
-              Крем-брюле и пломбир с малиновым джемом
-            </label>
-
-            <label class="visually-hidden">
-              <input type="radio" name="set" value="val-2">
-              Шоколадный пломбир и лимонный сорбет
-            </label>
-
-            <label class="visually-hidden">
-              <input type="radio" name="set" value="val-3">
-              Пломбир с помадкой и клубничный щербет
-            </label>
-          </div>
-          <a href="basket.html" class="btn btn-set">
-            Давайте оба!
-          </a>
-        </div>
+            </h3>
+            <a class="btn btn-slide" href="#">
+                Давайте оба!
+            </a>
+          </li>
+        </ul>
 
         <ul class="offer-list">
           <li class="offer-item offer-raspberry">
-            <h3 class="offer-header">Малинка даром!</h3>
-            <p class="offer-description">
-              При покупке 2 кг любого фруктового мороженого, добавим
-              в ваш заказ банку малинового варенья бесплатно.
-            </p>
-            <a class="btn" href="basket.html">Хочу варенье!</a>
+            <div class="offer-text">
+              <h3 class="offer-header">Малинка даром!</h3>
+              <p class="offer-description">
+                При покупке 2 кг любого фруктового мороженого, добавим
+                в ваш заказ банку малинового варенья бесплатно.
+              </p>
+            </div>
+            <a class="btn btn-jam" href="basket.html">Хочу варенье!</a>
           </li>
           <li class="offer-item offer-chocolate">
-            <h3 class="offer-header">Шоколадки даром!</h3>
-            <p class="offer-description">
-              При покупке 2 кг пломбира, добавим в ваш заказ упаковку
-              вкуснейшей шоколадной присыпки совершенно бесплатно.
-            </p>
-            <a class="btn" href="basket.html">Хочу шоколадки!</a>
+            <div class="offer-text">
+              <h3 class="offer-header">Шоколадки даром!</h3>
+              <p class="offer-description">
+                При покупке 2 кг пломбира, добавим в ваш заказ упаковку
+                вкуснейшей шоколадной присыпки совершенно бесплатно.
+              </p>
+            </div>
+            <a class="btn btn-chocolate" href="basket.html">Хочу шоколадки!</a>
           </li>
         </ul>
 
@@ -220,7 +233,7 @@
         <div class="catalog-list-container">
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="picture" src="img/product-1.jpg" width="267" height="267"
+              <img class="picture picture-hit" src="img/product-1.jpg" width="267" height="267"
                     alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <h3>
                 <a class="item-reference white-references" href="catalog-item.html">
@@ -477,5 +490,6 @@
       </form>
       <button class="btn-close" type="button">Закрыть</button>
     </section>
+    </div>
   </body>
 </html>
