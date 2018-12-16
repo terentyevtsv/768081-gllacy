@@ -71,7 +71,7 @@ body {
   align-items: center;
 
   list-style: none;
-  margin: 0 0 9px 10px;
+  margin: 0 0 4px 10px;
   padding: 0;
 
   min-width: 349px;
@@ -585,9 +585,9 @@ body {
 
 .promo {
   width: 1146px;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 13px auto;
 
-  padding-top: 280px;
+  padding-top: 277px;
 
   text-align: center;
   color: #ffffff;
@@ -643,7 +643,7 @@ body {
 
 .slider-controls {
   position: absolute;
-  top: 450px;
+  top: 447px;
   left: 0px;
   z-index: 20;
   font-size: 0;
@@ -777,6 +777,8 @@ body {
 }
 
 .offer-description {
+  box-sizing: border-box;
+
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
@@ -784,6 +786,8 @@ body {
 
   margin: 0px 0px 44px 0px;
   padding: 0;
+
+  width: 514px;
 }
 
 .catalog-list {
@@ -820,7 +824,7 @@ body {
 
 .catalog-item-name {
   margin: 0;
-  padding: 8px 0px 0px 0px;
+  padding: 9px 0px 0px 0px;
 }
 
 .catalog-item:nth-child(4n) {
@@ -993,9 +997,9 @@ body {
 
 .btn-jam,
 .btn-chocolate {
-  padding: 13px 22px 11px 22px;
+  padding: 11px 22px 11px 22px;
   align-self: flex-end;
-  margin: 0px 21px 25px 0px;
+  margin: 0px 21px 23px 0px;
   border-radius: 20px;
 }
 
@@ -1060,7 +1064,7 @@ body {
   color: #323232;
 
   width: 560px;
-  padding: 23px 27px 0px 57px;
+  padding: 20px 27px 0px 57px;
 
   position: relative;
 }
@@ -1123,13 +1127,13 @@ body {
   font-weight: 500;
 
   margin: 0 0 5px 0;
-  padding: 24px 0px 0px 20px;
+  padding: 22px 0px 0px 20px;
 }
 
 .news-article-container {
   box-sizing: border-box;
 
-  width: 301px;
+  width: 302px;
   margin: 0;
   padding: 0px 0px 80px 21px;
 }
