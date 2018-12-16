@@ -31,6 +31,23 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 9px;
+
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("../img/set-2.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/set-3.png");
 }
 
 .main-header {
@@ -67,6 +84,7 @@ body {
 
 .navigation-item:hover .sub-catalog-container {
   display: block;
+  z-index: 1;
 }
 
 .user-navigation {
@@ -89,6 +107,7 @@ body {
 
 .search-container:hover .form-search-container {
   display: block;
+  z-index: 1;
 }
 
 .login-container {
@@ -97,6 +116,7 @@ body {
 
 .login-container:hover .form-login-container {
   display: block;
+  z-index: 1;
 }
 
 /* Ссылки/элементы главного меню
@@ -328,6 +348,7 @@ body {
 
 .basket-container:hover .section-basket-container {
   display: block;
+  z-index: 1;
 }
 
 .basket-container:hover .empty-basket::before {
@@ -581,7 +602,7 @@ body {
   width: 1146px;
   margin: 0 auto 40px auto;
 
-  padding-top: 277px;
+  padding-top: 280px;
 
   text-align: center;
   color: #ffffff;
@@ -637,8 +658,8 @@ body {
 
 .slider-controls {
   position: absolute;
-  top: 447px;
-  left: -1px;
+  top: 450px;
+  left: 0px;
   z-index: 20;
   font-size: 0;
 }
@@ -932,7 +953,7 @@ body {
 
 .btn-jam,
 .btn-chocolate {
-  padding: 11px 22px 9px 22px;
+  padding: 13px 22px 11px 22px;
   align-self: flex-end;
   margin: 0px 21px 25px 0px;
   border-radius: 20px;
