@@ -465,21 +465,6 @@ body {
   border-radius: 50%;
 }
 
-.picture-hit::before {
-  content: "";
-  top: 0px;
-  left: 0px;
-
-  width: 61px;
-  height: 61px;
-
-  position: absolute;
-
-  background-image: url("../img/hit.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
 .section-basket-container {
   position: absolute;
   padding-top: 10px;
@@ -600,7 +585,7 @@ body {
 
 .promo {
   width: 1146px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 15px auto;
 
   padding-top: 280px;
 
@@ -807,16 +792,30 @@ body {
 
   list-style: none;
   padding: 0;
-  margin: 0 0 82px 0;
+  margin: 0;
 }
 
 .catalog-item {
-  position: relative;
-
-  min-height: 325px;
   width: 267px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   margin-right: 26px;
+
+  position: relative;
+}
+
+.catalog-item::before {
+  content: "";
+  top: 0px;
+  left: 0px;
+
+  width: 61px;
+  height: 61px;
+
+  position: absolute;
+
+  background-image: url("../img/hit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .catalog-item-name {
@@ -826,6 +825,14 @@ body {
 
 .catalog-item:nth-child(4n) {
   margin-right: 0;
+}
+
+.btn-fast-view {
+  visibility: hidden;
+}
+
+.catalog-item:hover .btn-fast-view {
+  visibility: visible;
 }
 
 .catalog-item:hover {
@@ -846,10 +853,38 @@ body {
   line-height: 45px;
   font-weight: 700;
   color: #ffffff;
+
+  position: absolute;
+  top: 164px;
+  left: -1px;
+
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .kilo {
   font-size: 30px;
+  margin-left: 24px;
+
+  position: relative;
+
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.kilo::before {
+  content: "";
+
+  position: absolute;
+  top: -5px;
+  right: -57px;
+
+  width: 129px;
+  height: 150px;
+
+  background-image: url("../img/ruble.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 /* Хлебные крошки */
@@ -983,12 +1018,16 @@ body {
 
 /* Преимущества */
 .features {
+  box-sizing: border-box;
   background-color: #ebdec4;
   background-image: url("../img/wafer.jpg");
   background-repeat: repeat;
 
   width: 1146px;
   margin: 0 auto 40px auto;
+
+  border-radius: 15px;
+  padding: 24px 0px 28px 20px;
 }
 
 .glacy-shop {
@@ -996,17 +1035,65 @@ body {
   line-height: 30px;
   font-weight: 500;
   color: #323232;
+
+  margin: 0;
+  padding: 0;
 }
 
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .feature-item {
+  box-sizing: border-box;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   color: #323232;
+
+  width: 560px;
+  padding: 23px 27px 0px 57px;
+
+  position: relative;
+}
+
+.feature-item::before {
+  content: "";
+
+  width: 49px;
+  height: 49px;
+
+  top: 10px;
+  left: 0px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  position: absolute;
+}
+
+.feature-item:nth-child(1)::before {
+  background-image: url("../img/ice-cream.svg");
+}
+
+.feature-item:nth-child(2)::before {
+  background-image: url("../img/cow.svg");
+}
+
+.feature-item:nth-child(3)::before {
+  background-image: url("../img/eco.svg");
+}
+
+.feature-item:nth-child(4)::before {
+  background-image: url("../img/thermometer.svg");
 }
 
 .education {
@@ -1019,17 +1106,32 @@ body {
 
 /* Новое в нашем блоге */
 .news {
+  box-sizing: border-box;
+
   background-color: #ffffff;
   background-image: url("../img/srawberry.jpg");
   background-repeat: no-repeat;
+  background-position: -52px -224px;
 
   width: 560px;
+  border-radius: 15px;
 }
 
 .news-header {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
+
+  margin: 0 0 5px 0;
+  padding: 24px 0px 0px 20px;
+}
+
+.news-article-container {
+  box-sizing: border-box;
+
+  width: 301px;
+  margin: 0;
+  padding: 0px 0px 80px 21px;
 }
 
 .news-article {
@@ -1048,6 +1150,8 @@ body {
 .subscription {
   background-color: #f8f7f4;
   width: 560px;
+
+  border-radius: 15px;
 }
 
 .subscription-offer {
@@ -1055,6 +1159,9 @@ body {
   line-height: 22px;
   font-weight: 400;
   color: #5a5a5a;
+
+  padding: 0;
+  margin: 0;
 }
 
 /* Стили полей ввода */
