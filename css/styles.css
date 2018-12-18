@@ -761,10 +761,12 @@ body {
 
 .offer-raspberry {
   background-image: url("../img/raspberries.jpg");
+  background-position: -50px -94px;
 }
 
 .offer-chocolate {
   background-image: url("../img/chocolate.jpg");
+  background-position: -218px -104px;
 }
 
 .offer-header {
@@ -1234,7 +1236,7 @@ body {
   justify-content: flex-end;
 
   background-color: #ffffff;
-  background-image: url("../img/map.jpg");
+  background-image: url("../img/map-pin-shadow.jpg");
   background-repeat: no-repeat;
   background-position: 0px -107px;
   margin: 0 auto;
@@ -1260,8 +1262,6 @@ body {
 
   margin: 0;
   padding: 0;
-
-  width: 172px;
 }
 
 .address {
@@ -1337,12 +1337,15 @@ body {
 
 /* Списки соц. сетей и списки ссылок на документы */
 .footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   list-style: none;
   padding: 0;
   margin: 0;
 
-  min-height: 60px;
-  width: 188px;
+  width: 185px;
 }
 
 .documents {
@@ -1357,15 +1360,37 @@ body {
 }
 
 .social-site {
-  background-color: #e6ebe9;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.502);
+}
+
+.svg-style {
+  fill: #e6ebe9;
 }
 
 .social-site:hover {
-  background-color: #ffffff;
+  border: 3px solid rgba(255, 255, 255, 0.702);
+}
+
+.social-site:hover .svg-style {
+  fill: #ffffff;
 }
 
 .social-site:active {
-  background-color: #e9e9e9;
+  border: 3px solid rgba(255, 255, 255, 0.702);
+}
+
+.social-site:active .svg-style {
+  fill: #e9e9e9;
 }
 
 .document-site {
@@ -1416,7 +1441,5 @@ body {
   width: 1146px;
   margin: 18px auto 0 auto;
   padding: 18px 0 25px 0;
-
-  min-height: 85px;
 }
 
