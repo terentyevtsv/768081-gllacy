@@ -1240,10 +1240,15 @@ body {
 }
 
 .shop-info {
+  display: flex;
+  flex-direction: column;
+
   background-color: #ffffff;
   width: 302px;
 
   margin: 62px 27px 62px 0;
+  border-radius: 15px;
+  padding: 0px 0px 30px 0px;
 }
 
 .address,
@@ -1251,6 +1256,19 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+
+  width: 172px;
+}
+
+.address {
+  padding: 30px 118px 0px 26px;
+}
+
+.phone {
+  padding: 0px 0px 0px 25px;
 }
 
 .address-value,
@@ -1258,20 +1276,33 @@ body {
   color: #323232;
   font-size: 18px;
   font-weight: 700;
+
+  margin: 0;
+  padding: 0;
 }
 
 .address-value {
   line-height: 24px;
+  padding: 1px 34px 0px 26px;
+  margin-bottom: 18px;
 }
 
 .phone-value {
   line-height: 22px;
+  padding: 5px 124px 0px 25px;
+  margin-bottom: 22px;
 }
 
 .time-value {
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
+}
+
+.btn-feedback {
+  padding: 10px 25px 12px 30px;
+  align-self: center;
+  border-radius: 30px;
 }
 
 /* Страницы каталога */
