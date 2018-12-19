@@ -53,10 +53,12 @@ body {
 .main-header {
   width: 1146px;
   margin: 0 auto 0 auto;
+  position: relative;
 }
 
 .main-header-catalog {
   padding-top: 9px;
+  margin-bottom: 20px;
 }
 
 .main-navigation {
@@ -560,7 +562,19 @@ body {
 
   width: 168px;
   padding: 0;
-  margin: -10px 0 0 auto;
+  margin: 0;
+
+  position: absolute;
+}
+
+.main-contacts {
+  top: 58px;
+  right: 0px;
+}
+
+.catalog-contacts {
+  top: 68px;
+  right: 0px;
 }
 
 .work-time {
@@ -591,7 +605,7 @@ body {
   width: 1146px;
   margin: 0 auto 13px auto;
 
-  padding-top: 277px;
+  padding-top: 315px;
 
   text-align: center;
   color: #ffffff;
@@ -647,7 +661,7 @@ body {
 
 .slider-controls {
   position: absolute;
-  top: 447px;
+  top: 486px;
   left: 0px;
   z-index: 20;
   font-size: 0;
@@ -803,9 +817,19 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  text-align: center;
 }
 
 .catalog-item {
+  width: 267px;
+  margin-bottom: 11px;
+  margin-right: 26px;
+
+  position: relative;
+}
+
+.catalog-item-hit {
   width: 267px;
   margin-bottom: 0px;
   margin-right: 26px;
@@ -813,7 +837,7 @@ body {
   position: relative;
 }
 
-.catalog-item::before {
+.catalog-item-hit::before {
   content: "";
   top: 0px;
   left: 0px;
@@ -833,7 +857,8 @@ body {
   padding: 9px 0px 0px 0px;
 }
 
-.catalog-item:nth-child(4n) {
+.catalog-item:nth-child(4n),
+.catalog-item-hit:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -905,7 +930,7 @@ body {
 }
 
 .breadcrumbs-navigation {
-  margin: 0 0 10px 0px;
+  margin: 0 0 4px 0px;
 }
 
 .breadcrumbs {
@@ -932,8 +957,8 @@ body {
   font-weight: 400;
   color: #ffffff;
 
-  top: 3px;
-  right: -13px;
+  top: 2px;
+  right: -14px;
 }
 
 .breadcrumbs-reference {
@@ -945,6 +970,7 @@ body {
 .breadcrumbs-reference-current {
   text-decoration: none;
   color: #ffffff;
+  padding-top: 2px;
 }
 
 /* Заголовок страницы каталога */
@@ -955,12 +981,12 @@ body {
   color: #ffffff;
 
   margin: 0;
-  padding: 0;
+  padding: 0px 0px 0px 0px;
 }
 
 /* Стили фильтров */
 .filters {
-  margin: 0 0 40px 0;
+  margin: 0 0 67px 0;
 }
 
 .form-filter {
