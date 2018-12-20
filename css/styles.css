@@ -823,7 +823,7 @@ body {
 
 .catalog-item {
   width: 267px;
-  margin-bottom: 11px;
+  margin-bottom: 35px;
   margin-right: 26px;
 
   position: relative;
@@ -831,7 +831,7 @@ body {
 
 .catalog-item-hit {
   width: 267px;
-  margin-bottom: 0px;
+  margin-bottom: 24px;
   margin-right: 26px;
 
   position: relative;
@@ -855,6 +855,7 @@ body {
 .catalog-item-name {
   margin: 0;
   padding: 9px 0px 0px 0px;
+  width: 257px;
 }
 
 .catalog-item:nth-child(4n),
@@ -863,17 +864,34 @@ body {
 }
 
 .btn-fast-view {
-  visibility: visible;
+  padding: 9px 17px 12px 19px;
+  border-radius: 30px;
 }
 
-.catalog-item:hover .btn-fast-view {
-  visibility: visible;
-}
+.card {
+  visibility: hidden;
 
-.catalog-item:hover {
   border-radius: 5px;
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  position: absolute;
+  top: -8px;
+  left: -13px;
+
+  width: 293px;
+  margin: 0px 0px 0px 0px;
+  padding: 349px 0px 32px 0px;
+
+  z-index: 2;
+}
+
+.catalog-item:hover .card {
+  visibility: visible;
+}
+
+.catalog-item-hit:hover .card {
+  visibility: visible;
 }
 
 .item-reference {
