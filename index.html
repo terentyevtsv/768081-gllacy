@@ -522,35 +522,47 @@
 
     <!-- Обратная связь -->
     <section class="feedback">
-      <h2>Мы обязательно вам ответим!</h2>
-      <form class="form-feedback" method="post">
-        <p>
-          <label class="visually-hidden">
-            Имя
+      <div class="feedback-container">
+        <h2 class="feedback-header">Мы обязательно вам ответим!</h2>
+        <form class="form-feedback" method="post">
+          <p class="name-param-feedback">
+            <label class="visually-hidden"
+                    for="feedback-name-id">
+              Имя
+            </label>
             <input class="feedback-name" type="text"
-                    placeholder="Как вас зовут?" name="name">
-          </label>
-        </p>
-        <p>
-          <label class="visually-hidden">
-            Электронная почта
+                  placeholder="Как вас зовут?" name="name"
+                  id="feedback-name-id">
+          </p>
+          <p class="email-param-feedback">
+            <label class="visually-hidden"
+                    for="feedback-email-id">
+              Электронная почта
+            </label>
             <input class="feedback-email" type="text"
-                    placeholder="Как вас зовут?" name="email">
-          </label>
-        </p>
-        <p>
-          <label class="visually-hidden">
-            Напишите ваши пожелания!
+                  placeholder="Ваша почта для ответа?" name="email"
+                  id="feedback-email-id">
+          </p>
+          <p class="wishes-param-feedback">
+            <label class="visually-hidden"
+                    for="feedback-wishes-id">
+              Напишите ваши пожелания!
+            </label>
             <textarea class="feedback-text"
+                      id = "feedback-wishes-id"
                       placeholder="Напишите что-нибудь..."
                       name="wishes"></textarea>
-          </label>
-        </p>
-        <button class="btn" type="submit">
-          Отправить
+          </p>
+          <button class="btn btn-form-feedback" type="submit">
+            Отправить
+          </button>
+        </form>
+        <button class="btn-close" type="button">
+          <img src="img/cross-big.svg"
+                width="18" height="17"
+                alt="Закрыть">
         </button>
-      </form>
-      <button class="btn-close" type="button">Закрыть</button>
+      </div>
     </section>
     </div>
   </body>

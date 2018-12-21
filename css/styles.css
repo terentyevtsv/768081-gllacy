@@ -256,7 +256,7 @@ body {
 .search-phrase {
   box-sizing: border-box;
   width: 310px;
-  padding: 16px 225px 8px 10px;
+  padding: 16px 10px 8px 10px;
   border: 1px solid rgb(211, 211, 210);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
@@ -816,9 +816,13 @@ body {
 
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0px;
 
   text-align: center;
+}
+
+.full-catalog-list {
+  margin-bottom: 50px;
 }
 
 .catalog-item {
@@ -1375,20 +1379,29 @@ body {
 /* Страницы каталога */
 .pagination-list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-self: flex-end;
 
   list-style: none;
   padding: 0;
   margin: 0;
+
+  width: 189px;
 }
 
-.page {
+.page,
+.current-page,
+.btn-arrow-left,
+.btn-arrow-right {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
 
   color: #ffffff;
   text-decoration: none;
+
+  padding: 5px 9px 2px 9px;
+  border-radius: 50%;
 }
 
 .page:hover {
@@ -1549,3 +1562,102 @@ body {
   padding: 18px 0 25px 0;
 }
 
+/* Форма обратной связи */
+.feedback {
+  box-sizing: border-box;
+  position: fixed;
+  top: 338px;
+  left: 50%;
+  margin-left: -236px;
+  background-color: #f8f7f4;
+  width: 477px;
+  padding: 16px 25px 27px 23px;
+
+  border-radius: 10px;
+}
+
+.feedback-header,
+.name-param-feedback,
+.email-param-feedback,
+.wishes-param-feedback {
+  margin: 0;
+  padding: 0;
+}
+
+.feedback-container {
+  position: relative;
+}
+
+.btn-close {
+  position: absolute;
+  top: -1px;
+  right: -8px;
+
+  width: 18px;
+  height: 17px;
+
+  border: 0;
+  cursor: pointer;
+
+  background-color: transparent;
+  padding: 0;
+}
+
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 0px 0px 0px;
+}
+
+.name-param-feedback {
+  margin-bottom: 20px;
+}
+
+.email-param-feedback {
+  margin-bottom: 20px;
+}
+
+.feedback-name,
+.feedback-email {
+  box-sizing: border-box;
+
+  width: 267px;
+  padding: 12px 13px 12px 13px;
+
+  border-radius: 5px;
+  border: 1px solid rgb(178, 178, 178);
+  opacity: 0.52;
+}
+
+.feedback-text {
+  box-sizing: border-box;
+  width: 428px;
+  padding: 10px 14px 107px 14px;
+
+  border-radius: 5px;
+  border: 1px solid rgb(178, 178, 178);
+  opacity: 0.52;
+}
+
+.wishes-param-feedback {
+  margin-bottom: 19px;
+}
+
+.btn-form-feedback {
+  padding: 10px 21px 9px 23px;
+  align-self: flex-end;
+  border-radius: 30px;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #a9bbb1;
+}
+
+.backward {
+  transform: rotate(180deg);
+}
