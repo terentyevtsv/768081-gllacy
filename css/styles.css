@@ -1172,11 +1172,13 @@ body {
 
 .btn-filter {
   box-sizing: border-box;
+  align-self: center;
 
   width: 144px;
-  margin: 0;
-  padding: 0px 0px 0px 0px;
+  margin: 16px 0px 0px 0px;
+  padding: 8px 0px 7px 0px;
 
+  border-radius: 20px;
   border-style: solid;
   border-width: 2px;
   border-color: rgb(255, 255, 255);
