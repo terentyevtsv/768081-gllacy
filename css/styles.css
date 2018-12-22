@@ -256,7 +256,7 @@ body {
 .search-phrase {
   box-sizing: border-box;
   width: 310px;
-  padding: 16px 10px 8px 10px;
+  padding: 9px 10px 8px 10px;
   border: 1px solid rgb(211, 211, 210);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
@@ -949,7 +949,7 @@ body {
 .breadcrumb-container {
   display: flex;
   flex-direction: column-reverse;
-  margin: 0 0 30px 0;
+  margin: 0 0 26px 0;
 }
 
 .breadcrumbs-navigation {
@@ -1009,21 +1009,25 @@ body {
 
 /* Стили фильтров */
 .filters {
-  margin: 0 0 67px 0;
+  margin: 0 0 33px 0;
 }
 
 .form-filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   width: 870px;
 }
 
 .sort,
+.price-range,
 .fat-content,
 .fillers {
   border: none;
+
+  padding: 0px 0px 7px 0px;
+  margin: 0;
 }
 
 .filter-header {
@@ -1031,28 +1035,114 @@ body {
   line-height: 16px;
   font-weight: 500;
   color: #ffffff;
+
+  margin-bottom: 7px;
+  padding: 0px 0px 0px 16px;
 }
 
 .filter-value {
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+
+  position: relative;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
 }
 
+.filter-value::before {
+  content: "";
+  position: absolute;
+}
+
+.fat-filter-value::before {
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  left: -34px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+}
+
+.fat-filter-value:hover::before {
+  background-image: url("../img/radio-off-hover.svg");
+}
+
+.filter-input-radio:checked + .fat-filter-value::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.filter-input-radio:checked + .fat-filter-value:hover::before {
+  background-image: url("../img/radio-on-hover.svg");
+}
+
+.fillers-filter-value::before {
+  width: 23px;
+  height: 23px;
+  top: -4px;
+  left: -33px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.fillers-filter-value:hover::before {
+  background-image: url("../img/checkbox-off-hover.svg");
+}
+
+.filter-input-checkbox:checked + .fillers-filter-value::before {
+  width: 27px;
+
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input-checkbox:checked + .fillers-filter-value:hover::before {
+  background-image: url("../img/checkbox-on-hover.svg");
+}
+
 /* Значения по фильтру */
 .options {
+  display: flex;
+  justify-content: flex-start;
+
   list-style: none;
   margin: 0;
   padding: 0;
+
+  border-radius: 36px;
+
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.filter-option {
-  display: inline-block;
+.fat-filter-option {
+  padding: 10px 0px 7px 48px;
+}
+
+.fillers-filter-option {
+  padding: 9px 2px 7px 50px;
+}
+
+.sort,
+.price-range,
+.fillers {
+  margin-right: 16px;
+  margin-bottom: 1px;
 }
 
 /* Селектор */
 .sort-kind {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+
+  padding: 5px 14px 8px 8px;
+  border-radius: 36px;
+
   background-color: rgba(248, 247, 244, 0.2);
 }
 
@@ -1067,6 +1157,69 @@ body {
   color: #323232;
 }
 
+/* Ползунок цены */
+.range-controls {
+  position: relative;
+
+  box-sizing: border-box;
+  height: 36px;
+  width: 220px;
+  padding-top: 16px;
+  padding-right: 22px;
+  padding-left: 22px;
+
+  border-radius: 36px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.scale {
+  height: 4px;
+
+  background: #d1dad3;
+}
+
+.bar {
+  width: 70%;
+  height: 4px;
+
+  background: #f8f7f4;
+}
+
+.toggle {
+  position: absolute;
+  top: 7px;
+
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #b4b4b4;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 36px;
+}
+
+.range-controls .toggle-max {
+  left: 134px;
+}
+
+/* Жирность */
+.fat-case-container {
+  width: 415px;
+}
+
+/* Наполнители */
+.fillers-flag-container {
+  width: 702px;
+}
+
+
 .btn-jam,
 .btn-chocolate {
   padding: 11px 22px 11px 22px;
@@ -1076,6 +1229,14 @@ body {
 }
 
 .btn-filter {
+  box-sizing: border-box;
+  align-self: center;
+
+  width: 144px;
+  margin: 16px 0px 0px 0px;
+  padding: 8px 0px 7px 0px;
+
+  border-radius: 20px;
   border-style: solid;
   border-width: 2px;
   border-color: rgb(255, 255, 255);
@@ -1262,7 +1423,8 @@ body {
 }
 
 .subscription-email {
-  padding: 6px 169px 12px 14px;
+  width: 368px;
+  padding: 6px 14px 12px 14px;
   margin-right: 10px;
 }
 
