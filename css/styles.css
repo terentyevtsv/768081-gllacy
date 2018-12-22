@@ -256,7 +256,7 @@ body {
 .search-phrase {
   box-sizing: border-box;
   width: 310px;
-  padding: 16px 10px 8px 10px;
+  padding: 9px 10px 8px 10px;
   border: 1px solid rgb(211, 211, 210);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
@@ -1423,7 +1423,8 @@ body {
 }
 
 .subscription-email {
-  padding: 6px 169px 12px 14px;
+  width: 368px;
+  padding: 6px 14px 12px 14px;
   margin-right: 10px;
 }
 
