@@ -1792,7 +1792,7 @@ body {
   box-sizing: border-box;
 
   width: 267px;
-  padding: 12px 13px 12px 13px;
+  padding: 12px 13px 6px 13px;
 
   border-radius: 5px;
   border: 1px solid rgb(178, 178, 178);
@@ -1802,7 +1802,7 @@ body {
 .feedback-text {
   box-sizing: border-box;
   width: 428px;
-  padding: 10px 14px 107px 14px;
+  padding: 10px 14px 95px 14px;
 
   border-radius: 5px;
   border: 1px solid rgb(178, 178, 178);
