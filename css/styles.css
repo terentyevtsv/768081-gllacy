@@ -1069,8 +1069,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.fat-filter-value:hover::before {
+  background-image: url("../img/radio-off-hover.svg");
+}
+
 .filter-input-radio:checked + .fat-filter-value::before {
   background-image: url("../img/radio-on.svg");
+}
+
+.filter-input-radio:checked + .fat-filter-value:hover::before {
+  background-image: url("../img/radio-on-hover.svg");
 }
 
 .fillers-filter-value::before {
@@ -1083,10 +1091,18 @@ body {
   background-repeat: no-repeat;
 }
 
+.fillers-filter-value:hover::before {
+  background-image: url("../img/checkbox-off-hover.svg");
+}
+
 .filter-input-checkbox:checked + .fillers-filter-value::before {
   width: 27px;
 
   background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input-checkbox:checked + .fillers-filter-value:hover::before {
+  background-image: url("../img/checkbox-on-hover.svg");
 }
 
 /* Значения по фильтру */
