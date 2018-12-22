@@ -239,13 +239,28 @@
           </fieldset>
 
           <!-- Здесь должен быть спин по выбору диапазона цен. -->
+          <fieldset class="price-range">
+            <legend class="filter-header">
+              Цена: 100 руб. – 500 руб.
+            </legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="margin-left: 19%; width: 45%">
+                  </div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+            </div>
+          </fieldset>
 
           <fieldset class="fat-content">
             <legend class="filter-header">
               Жирность:
             </legend>
-            <ul class="options">
-              <li class="filter-option">
+            <ul class="options fat-case-container">
+              <li class="fat-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-radio"
                           name="fat-percent" value="zero" type="radio">
@@ -253,7 +268,7 @@
                 </label>
               </li>
 
-              <li class="filter-option">
+              <li class="fat-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-radio"
                           name="fat-percent" value="before-ten" type="radio" checked>
@@ -261,7 +276,7 @@
                 </label>
               </li>
 
-              <li class="filter-option">
+              <li class="fat-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-radio"
                           name="fat-percent" value="before-thirty" type="radio">
@@ -269,7 +284,7 @@
                 </label>
               </li>
 
-              <li class="filter-option">
+              <li class="fat-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-radio"
                           name="fat-percent" value="above-thirty" type="radio">
@@ -283,8 +298,8 @@
             <legend class="filter-header">
               Наполнители:
             </legend>
-            <ul class="options">
-              <li class="filter-option">
+            <ul class="options fillers-flag-container">
+              <li class="fillers-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-checkbox"
                           name="chocolate" type="checkbox" checked>
@@ -292,7 +307,7 @@
                 </label>
               </li>
 
-              <li class="filter-option">
+              <li class="fillers-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-checkbox"
                           name="sugar-powders" type="checkbox" checked>
@@ -300,7 +315,7 @@
                 </label>
               </li>
 
-              <li class="filter-option">
+              <li class="fillers-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-checkbox"
                           name="fruits" type="checkbox">
@@ -308,7 +323,7 @@
                 </label>
               </li>
 
-              <li class="filter-option">
+              <li class="fillers-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-checkbox"
                           name="syrups" type="checkbox">
@@ -316,7 +331,7 @@
                 </label>
               </li>
 
-              <li class="filter-option">
+              <li class="fillers-filter-option">
                 <label class="filter-value">
                   <input class="visually-hidden filter-input filter-input-checkbox"
                           name="jams" type="checkbox">
