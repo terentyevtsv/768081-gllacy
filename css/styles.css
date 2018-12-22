@@ -1009,7 +1009,7 @@ body {
 
 /* Стили фильтров */
 .filters {
-  margin: 0 0 70px 0;
+  margin: 0 0 33px 0;
 }
 
 .form-filter {
@@ -1041,10 +1041,52 @@ body {
 }
 
 .filter-value {
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+
+  position: relative;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
+}
+
+.filter-value::before {
+  content: "";
+  position: absolute;
+}
+
+.fat-filter-value::before {
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  left: -34px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-input-radio:checked + .fat-filter-value::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.fillers-filter-value::before {
+  width: 23px;
+  height: 23px;
+  top: -4px;
+  left: -33px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked + .fillers-filter-value::before {
+  width: 27px;
+
+  background-image: url("../img/checkbox-on.svg");
 }
 
 /* Значения по фильтру */
