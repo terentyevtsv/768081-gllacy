@@ -7,6 +7,34 @@
   display: none;
 }
 
+/* Стили полей ввода */
+.input-style {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #323232;
+
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.52;
+}
+
+.input-style::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
+.input-style:hover {
+  border-color: rgb(154, 154, 154);
+}
+
+.input-style:focus {
+  border-color: rgb(46, 136, 228);
+}
+
 .visually-hidden {
   position: absolute;
 
@@ -250,14 +278,14 @@ body {
   border-radius: 6px;
   background-color: rgb(248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  padding: 20px 15px 20px 15px;
+  padding: 20px 15px 19px 15px;
 }
 
 .search-phrase {
   box-sizing: border-box;
   width: 310px;
   padding: 9px 10px 8px 10px;
-  border: 1px solid rgb(211, 211, 210);
+  border-color: rgb(211, 211, 210);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
 }
@@ -300,7 +328,7 @@ body {
 .login-password {
   box-sizing: border-box;
 
-  border: 1px solid rgb(211, 211, 210);
+  border-color: rgb(211, 211, 210);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
   width: 240px;
@@ -310,7 +338,7 @@ body {
   font-weight: 400;
 
   color: #999999;
-  padding: 7px 13px 12px 13px;
+  padding: 7px 13px 9px 13px;
 }
 
 .search,
@@ -723,6 +751,7 @@ body {
 .btn-entrance {
   border-radius: 22px;
   padding: 3px 22px 4px 22px;
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
 }
 
 .email-password-info {
@@ -822,12 +851,12 @@ body {
 }
 
 .full-catalog-list {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .catalog-item {
   width: 267px;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   margin-right: 26px;
 
   position: relative;
@@ -870,6 +899,8 @@ body {
 .btn-fast-view {
   padding: 9px 17px 12px 19px;
   border-radius: 30px;
+
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
 }
 
 .card {
@@ -887,7 +918,7 @@ body {
   margin: 0px 0px 0px 0px;
   padding: 349px 0px 32px 0px;
 
-  z-index: 2;
+  z-index: 1;
 }
 
 .catalog-item:hover .card {
@@ -1062,8 +1093,8 @@ body {
 .fat-filter-value::before {
   width: 25px;
   height: 25px;
-  top: -5px;
-  left: -34px;
+  top: -4px;
+  left: -32px;
 
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
@@ -1084,8 +1115,8 @@ body {
 .fillers-filter-value::before {
   width: 23px;
   height: 23px;
-  top: -4px;
-  left: -33px;
+  top: -2px;
+  left: -32px;
 
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
@@ -1130,12 +1161,16 @@ body {
 .sort,
 .price-range,
 .fillers {
-  margin-right: 16px;
+  margin-right: 15px;
   margin-bottom: 1px;
 }
 
 /* Селектор */
 .sort-kind {
+  box-sizing: border-box;
+  width: 193px;
+  height: 36px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1426,42 +1461,13 @@ body {
   width: 368px;
   padding: 6px 14px 12px 14px;
   margin-right: 10px;
+
+  border-color: rgb(178, 178, 178);
 }
 
 .btn-send {
   padding: 6px 16px 10px 18px;
   border-radius: 20px;
-}
-
-/* Стили полей ввода */
-.input-style {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #323232;
-
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(178, 178, 178);
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
-  opacity: 0.52;
-}
-
-.input-style::-webkit-input-placeholder {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #999999;
-}
-
-.input-style:hover {
-  border-width: 2px;
-  border-color: rgb(154, 154, 154);
-}
-
-.input-style:focus {
-  border-color: rgb(46, 136, 228);
 }
 
 .location {
@@ -1542,7 +1548,7 @@ body {
 /* Страницы каталога */
 .pagination-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-self: flex-end;
 
   list-style: none;
@@ -1552,12 +1558,20 @@ body {
   width: 189px;
 }
 
+.arrow {
+  margin-right: 15px;
+}
+
 .pagination-list {
   display: flex;
 
-  margin: 0;
+  margin: 0px 13px 0px 0px;
   padding: 0;
   list-style: none;
+}
+
+.pagination-item {
+  margin-right: 3px;
 }
 
 .page,
@@ -1569,7 +1583,7 @@ body {
   color: #ffffff;
   text-decoration: none;
 
-  padding: 5px 11px 2px 9px;
+  padding: 4px 8px 3px 9px;
   border-radius: 50%;
 }
 
@@ -1792,20 +1806,20 @@ body {
   box-sizing: border-box;
 
   width: 267px;
-  padding: 12px 13px 6px 13px;
+  padding: 10px 13px 6px 13px;
 
   border-radius: 5px;
-  border: 1px solid rgb(178, 178, 178);
+  border-color:  rgb(178, 178, 178);
   opacity: 0.52;
 }
 
 .feedback-text {
   box-sizing: border-box;
   width: 428px;
-  padding: 10px 14px 95px 14px;
-
+  min-height: 155px;
+  padding: 10px 14px 10px 14px;
   border-radius: 5px;
-  border: 1px solid rgb(178, 178, 178);
+  border-color: rgb(178, 178, 178);
   opacity: 0.52;
 }
 
@@ -1822,7 +1836,7 @@ body {
 .catalog {
   display: flex;
   flex-direction: column;
-  padding-bottom: 32px;
+  padding-bottom: 33px;
   margin-bottom: 0px;
   border-bottom: 1px solid #a9bbb1;
 }
