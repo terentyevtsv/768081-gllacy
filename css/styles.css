@@ -751,6 +751,7 @@ body {
 .btn-entrance {
   border-radius: 22px;
   padding: 3px 22px 4px 22px;
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
 }
 
 .email-password-info {
@@ -850,12 +851,12 @@ body {
 }
 
 .full-catalog-list {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .catalog-item {
   width: 267px;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   margin-right: 26px;
 
   position: relative;
@@ -1092,8 +1093,8 @@ body {
 .fat-filter-value::before {
   width: 25px;
   height: 25px;
-  top: -5px;
-  left: -34px;
+  top: -4px;
+  left: -32px;
 
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
@@ -1114,8 +1115,8 @@ body {
 .fillers-filter-value::before {
   width: 23px;
   height: 23px;
-  top: -4px;
-  left: -33px;
+  top: -2px;
+  left: -32px;
 
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
@@ -1160,12 +1161,16 @@ body {
 .sort,
 .price-range,
 .fillers {
-  margin-right: 16px;
+  margin-right: 15px;
   margin-bottom: 1px;
 }
 
 /* Селектор */
 .sort-kind {
+  box-sizing: border-box;
+  width: 193px;
+  height: 36px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1831,7 +1836,7 @@ body {
 .catalog {
   display: flex;
   flex-direction: column;
-  padding-bottom: 32px;
+  padding-bottom: 33px;
   margin-bottom: 0px;
   border-bottom: 1px solid #a9bbb1;
 }
