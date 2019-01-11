@@ -20,7 +20,7 @@
       <header class="main-header">
         <nav class="main-navigation">
           <!-- Картинка в ссылке без адреса, т.к. страница главная -->
-          <a class="main-header-logo">
+          <a class="main-header-logo" aria-label="Главная страница">
             <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
           </a>
 
@@ -400,6 +400,10 @@
 
             <a class="btn btn-feedback" href="feedback.html">Форма обратной связи</a>
           </section>
+          <iframe class="frame"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.32085871621117!3d59.9387191690541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1547192749375"
+                  frameborder="0" style="border:0" allowfullscreen>
+          </iframe>
         </section>
       </main>
 
@@ -499,7 +503,8 @@
         <div class="author">
           <!-- Раздел авторских прав -->
           <p class="footer-logo">
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <a href="https://htmlacademy.ru/intensive/htmlcss"
+                aria-label="Ссылка на интенсив">
               <img src="img/academy-logo.svg" width="108" height="39" alt="Логотип HTML Академии">
             </a>
           </p>
@@ -556,80 +561,6 @@
       </section>
     </div>
 
-    <script>
-      var link = document.querySelector(".btn-feedback");
-
-      var popup = document.querySelector(".feedback");
-      var close = document.querySelector(".btn-close");
-
-      var form = popup.querySelector(".form-feedback");
-      var login = popup.querySelector(".feedback-name");
-      var email = popup.querySelector(".feedback-email");
-      var text = popup.querySelector(".feedback-text");
-
-      var isStorageSupport = true;
-      var nameStorage = "";
-      var emailStorage = "";
-
-      try {
-        nameStorage = localStorage.getItem("name");
-        emailStorage = localStorage.getItem("email");
-      }
-      catch (err) {
-        isStorageSupport = false;
-      }
-
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-
-        if (nameStorage) {
-          login.value = nameStorage;
-          email.focus();
-        }
-        else {
-          login.focus();
-        }
-
-        if (emailStorage) {
-          email.value = emailStorage;
-          text.focus();
-        }
-        else {
-          email.focus();
-        }
-      });
-
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      });
-
-      form.addEventListener("submit", function (evt) {
-        if (!login.value || !email.value || !text.value) {
-          evt.preventDefault();
-          popup.classList.remove("modal-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("modal-error");
-        }
-        else {
-          if (isStorageSupport) {
-            localStorage.setItem("name", login.value);
-            localStorage.setItem("email", email.value);
-          }
-        }
-      });
-
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popup.classList.contains("modal-show")) {
-            popup.classList.remove("modal-show");
-            popup.classList.remove("modal-error");
-          }
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
