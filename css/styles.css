@@ -186,8 +186,8 @@ body {
 
 /* Ссылки главного меню при нажатии */
 .menu-item:active {
-  background-color: rgba(248, 247, 244, 0.988);
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
 /* Активная ссылка Каталог на странице каталога */
