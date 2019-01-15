@@ -12,7 +12,8 @@
     <header class="main-header main-header-catalog">
       <nav class="main-navigation">
         <!-- Картинка в ссылке без адреса, т.к. страница главная -->
-        <a class="main-header-logo" href="index.html">
+        <a class="main-header-logo" href="index.html"
+            aria-label="Главная страница">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Глейси»">
         </a>
 
@@ -222,20 +223,22 @@
             <legend class="filter-header">
               Сортировка:
             </legend>
-            <select class="sort-kind filter-header">
-              <option class="option-item" value="popular" selected>
-                по популярности
-              </option>
-              <option class="option-item" value="cheap">
-                сначала недорогие
-              </option>
-              <option class="option-item" value="expensive">
-                сначала дорогие
-              </option>
-              <option class="option-item" value="fat">
-                по жирности
-              </option>
-            </select>
+            <div class="sort-kind-container">
+              <select class="sort-kind">
+                <option class="option-item" value="popular" selected>
+                  по популярности
+                </option>
+                <option class="option-item" value="cheap">
+                  сначала недорогие
+                </option>
+                <option class="option-item" value="expensive">
+                  сначала дорогие
+                </option>
+                <option class="option-item" value="fat">
+                  по жирности
+                </option>
+              </select>
+            </div>
           </fieldset>
 
           <!-- Здесь должен быть спин по выбору диапазона цен. -->
@@ -701,7 +704,8 @@
       <!-- Раздел авторских прав -->
       <div class="author">
         <p class="footer-logo">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <a href="https://htmlacademy.ru/intensive/htmlcss"
+              aria-label="Ссылка на интенсив">
             <img src="img/academy-logo.svg" width="108" height="39" alt="Логотип HTML Академии">
           </a>
         </p>
