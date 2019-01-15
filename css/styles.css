@@ -627,7 +627,7 @@ body {
 }
 
 .inner-page-container {
-  width: 1146px;
+  width: 1172px;
   margin: 0 auto;
 }
 
@@ -861,15 +861,19 @@ body {
 }
 
 .full-catalog-list {
-  margin-bottom: 44px;
+  margin-bottom: 52px;
 }
 
 .catalog-item {
-  width: 267px;
-  margin-bottom: 37px;
-  margin-right: 26px;
+  box-sizing: border-box;
+  width: 293px;
+  margin-bottom: 29px;
+  padding-top: 7px;
 
   position: relative;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .catalog-item-hit {
@@ -915,20 +919,22 @@ body {
 
 .card {
   visibility: hidden;
-
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-
   position: absolute;
-  top: -8px;
-  left: -13px;
-
+  top: 333px;
+  left: 0px;
   width: 293px;
   margin: 0px 0px 0px 0px;
-  padding: 349px 0px 32px 0px;
-
+  padding: 15px 0px 32px 0px;
   z-index: 1;
+}
+
+.catalog-item:hover {
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px -5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .catalog-item:hover .card {
@@ -953,8 +959,8 @@ body {
   color: #ffffff;
 
   position: absolute;
-  top: 208px;
-  left: -1px;
+  top: 215px;
+  left: 12px;
   margin: 0;
 
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
@@ -1050,7 +1056,7 @@ body {
 
 /* Стили фильтров */
 .filters {
-  margin: 0 0 33px 0;
+  margin: 0 0 27px 0;
 }
 
 .form-filter {
