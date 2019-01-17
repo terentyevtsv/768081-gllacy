@@ -62,30 +62,38 @@ body {
   background-color: #849d8f;
 }
 
-.site-wrapper {
-  background-color: #849d8f;
-  background-image: url("../img/set-1.png");
-  background-repeat: no-repeat;
-  background-position: top center;
+.fixed-part {
+  width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 9px;
 
-  transition: background-image 0.5s ease, background-color 0.5s ease;
+  background-image: url("../img/set-1.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  transition: background-image 0.5s ease;
 }
 
-.site-wrapper::before,
-.site-wrapper::after {
+.site-wrapper {
+  background-color: #849d8f;
+}
+
+.fixed-part::before,
+.fixed-part::after {
   content: "";
 
   visibility: hidden;
 }
 
-.site-wrapper::before {
+/* .fixed-part::before {
   background-image: url("../img/set-2.png");
 }
 
-.site-wrapper::after {
+.fixed-part::after {
   background-image: url("../img/set-3.png");
-}
+} */
 
 .main-header {
   position: relative;
@@ -625,8 +633,6 @@ body {
   margin-right: auto;
   padding-left: 27px;
   padding-right: 27px;
-
-  outline: 1px solid;
 }
 
 .inner-page-container {
@@ -722,19 +728,31 @@ body {
   background-color: #ffffff;
 }
 
-.check-1:checked ~ .site-wrapper {
+.check-1:checked ~ .site-wrapper .fixed-part {
   background-color: #849d8f;
   background-image: url("../img/set-1.png");
 }
 
-.check-2:checked ~ .site-wrapper {
+.check-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+}
+
+.check-2:checked ~ .site-wrapper .fixed-part {
   background-color: #8996a6;
   background-image: url("../img/set-2.png");
 }
 
-.check-3:checked ~ .site-wrapper {
+.check-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+}
+
+.check-3:checked ~ .site-wrapper .fixed-part {
   background-color: #9d8b84;
   background-image: url("../img/set-3.png");
+}
+
+.check-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
 }
 
 /* Кнопки и ссылки в виде кнопок */
@@ -1515,7 +1533,6 @@ body {
 
 .location {
   position: relative;
-  outline: 1px solid;
 
   background: #efe8d0 url("../img/map-pin-shadow.jpg") no-repeat;
   background-position: 0px -107px;
