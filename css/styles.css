@@ -88,8 +88,6 @@ body {
 }
 
 .main-header {
-  width: 1146px;
-  margin: 0 auto 0 auto;
   position: relative;
 }
 
@@ -607,12 +605,12 @@ body {
 
 .main-contacts {
   top: 59px;
-  right: 0px;
+  right: 27px;
 }
 
 .catalog-contacts {
   top: 68px;
-  right: 0px;
+  right: 26px;
 }
 
 .work-time {
@@ -622,8 +620,13 @@ body {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
+  width: 1146px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 27px;
+  padding-right: 27px;
+
+  outline: 1px solid;
 }
 
 .inner-page-container {
@@ -640,9 +643,7 @@ body {
 }
 
 .promo {
-  width: 1146px;
-  margin: 0 auto 13px auto;
-
+  margin-bottom: 13px;
   padding-top: 315px;
 
   text-align: center;
@@ -700,7 +701,7 @@ body {
 .slider-controls {
   position: absolute;
   top: 486px;
-  left: 0px;
+  left: 27px;
   z-index: 20;
   font-size: 0;
 }
@@ -1333,8 +1334,7 @@ body {
   background-image: url("../img/wafer.jpg");
   background-repeat: repeat;
 
-  width: 1146px;
-  margin: 0 auto 40px auto;
+  margin-bottom: 40px;
 
   border-radius: 15px;
   padding: 24px 0px 23px 20px;
@@ -1410,8 +1410,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  width: 1146px;
-  margin: 0 auto 40px auto;
+  margin-bottom: 40px;
 }
 
 /* Новое в нашем блоге */
@@ -1516,16 +1515,18 @@ body {
 
 .location {
   position: relative;
+  outline: 1px solid;
 
   background: #efe8d0 url("../img/map-pin-shadow.jpg") no-repeat;
   background-position: 0px -107px;
   margin: 0 auto;
   height: 429px;
+  width: 1200px;
 }
 
 .frame {
-  width: 1200px;
   height: 100%;
+  width: 1200px;
 }
 
 .shop-info {
@@ -1790,9 +1791,8 @@ body {
   display: flex;
   justify-content: space-between;
 
-  width: 1146px;
-  margin: 0 auto 0 auto;
-  padding: 19px 0px 25px 1px;
+  padding-top: 19px;
+  padding-bottom: 25px;
 }
 
 /* Форма обратной связи */
