@@ -69,7 +69,6 @@ body {
   margin-right: auto;
   padding-top: 9px;
 
-  background-image: url("../img/set-1.png");
   background-repeat: no-repeat;
   background-position: center top;
 
@@ -1071,6 +1070,15 @@ body {
 .filter-value::before {
   content: "";
   position: absolute;
+  opacity: 0.8;
+}
+
+.filter-input:enabled + .filter-value:hover::before {
+  opacity: 1;
+}
+
+.filter-input:disabled ~ .filter-value {
+  opacity: 0.4;
 }
 
 .filter-input:focus ~ .filter-value::before {
@@ -1083,20 +1091,12 @@ body {
   top: -4px;
   left: -32px;
 
-  background-image: url("../img/radio-off.svg");
+  background-image: url("../img/radio.svg");
   background-repeat: no-repeat;
-}
-
-.fat-filter-value:hover::before {
-  background-image: url("../img/radio-off-hover.svg");
 }
 
 .filter-input-radio:checked + .fat-filter-value::before {
   background-image: url("../img/radio-on.svg");
-}
-
-.filter-input-radio:checked + .fat-filter-value:hover::before {
-  background-image: url("../img/radio-on-hover.svg");
 }
 
 .fillers-filter-value::before {
@@ -1105,22 +1105,14 @@ body {
   top: -2px;
   left: -32px;
 
-  background-image: url("../img/checkbox-off.svg");
+  background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat;
-}
-
-.fillers-filter-value:hover::before {
-  background-image: url("../img/checkbox-off-hover.svg");
 }
 
 .filter-input-checkbox:checked + .fillers-filter-value::before {
   width: 27px;
 
   background-image: url("../img/checkbox-on.svg");
-}
-
-.filter-input-checkbox:checked + .fillers-filter-value:hover::before {
-  background-image: url("../img/checkbox-on-hover.svg");
 }
 
 /* Значения по фильтру */
@@ -1646,6 +1638,7 @@ body {
 
 .footer-social-item {
   margin-right: 11px;
+  margin-bottom: 29px;
 }
 
 .footer-social-item:nth-child(4n) {
