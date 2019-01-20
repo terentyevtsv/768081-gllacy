@@ -629,9 +629,7 @@ body {
   list-style: none;
 }
 
-.marker-1,
-.marker-2,
-.marker-3 {
+.marker {
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -645,6 +643,10 @@ body {
   border-radius: 50%;
 }
 
+.marker:hover {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+
 .slider-controls {
   position: absolute;
   top: 486px;
@@ -655,6 +657,12 @@ body {
 
 .slide {
   display: none;
+}
+
+.check-1:focus ~ .site-wrapper .marker-1,
+.check-2:focus ~ .site-wrapper .marker-2,
+.check-3:focus ~ .site-wrapper .marker-3 {
+  outline: 1px solid rgb(46, 136, 228);
 }
 
 .check-1:checked ~ .site-wrapper .slide1,
@@ -757,11 +765,12 @@ body {
 .offer-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   list-style: none;
   padding: 0;
 
-  margin: 0 auto 40px auto;
+  margin: 0 auto 0px auto;
 }
 
 .offer-item {
@@ -776,6 +785,8 @@ body {
   text-align: left;
 
   border-radius: 15px;
+
+  margin-bottom: 40px;
 }
 
 .offer-raspberry {
@@ -1062,6 +1073,10 @@ body {
   position: absolute;
 }
 
+.filter-input:focus ~ .filter-value::before {
+  outline: 1px solid rgb(46, 136, 228);
+}
+
 .fat-filter-value::before {
   width: 25px;
   height: 25px;
@@ -1112,6 +1127,7 @@ body {
 .options {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 
   list-style: none;
   margin: 0;
@@ -1181,7 +1197,7 @@ body {
   background-image: url(../img/icon-down-dir-hover.svg);
 }
 
-.sort-kind:hover {
+.sort-kind-container:hover .sort-kind {
   color: #323232;
 }
 
@@ -1351,19 +1367,19 @@ body {
   position: absolute;
 }
 
-.feature-item:nth-child(1)::before {
+.icon-ice-cream::before {
   background-image: url("../img/ice-cream.svg");
 }
 
-.feature-item:nth-child(2)::before {
+.icon-cow::before {
   background-image: url("../img/cow.svg");
 }
 
-.feature-item:nth-child(3)::before {
+.icon-eco::before {
   background-image: url("../img/eco.svg");
 }
 
-.feature-item:nth-child(4)::before {
+.icon-thermometer::before {
   background-image: url("../img/thermometer.svg");
 }
 
@@ -1621,11 +1637,19 @@ body {
 .footer-social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   padding-top: 18px;
 
   width: 185px;
+}
+
+.footer-social-item {
+  margin-right: 11px;
+}
+
+.footer-social-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .document-list {
@@ -1656,7 +1680,7 @@ body {
   width: 15px;
   height: 13px;
 
-  top: 16px;
+  top: 19px;
   right: 311px;
 
   background-image: url("../img/heart.svg");
@@ -1754,7 +1778,6 @@ body {
   justify-content: space-between;
 
   padding-top: 19px;
-  padding-bottom: 25px;
 }
 
 /* Форма обратной связи */
