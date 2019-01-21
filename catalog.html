@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <!-- <link href="css/styles.css" rel="stylesheet"> -->
+    <link href="css/styles.css" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
   </head>
   <body>
@@ -271,8 +271,8 @@
                   <div class="bar" style="margin-left: 19%; width: 45%">
                   </div>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <button class="toggle toggle-min" aria-label="Минимум цены"></button>
+                <button class="toggle toggle-max" aria-label="Максимум цены"></button>
               </div>
             </div>
           </fieldset>
@@ -719,12 +719,10 @@
 
       <!-- Раздел авторских прав -->
       <div class="author">
-        <p class="footer-logo">
-          <a href="https://htmlacademy.ru/intensive/htmlcss"
-              aria-label="Ссылка на интенсив">
-            <img src="img/academy-logo.svg" width="108" height="39" alt="Логотип HTML Академии">
-          </a>
-        </p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"
+            aria-label="Ссылка на интенсив">
+          <img src="img/academy-logo.svg" width="108" height="39" alt="Логотип HTML Академии">
+        </a>
         <p class="footer-copyright">
             Сделано в <a class="intensive-site white-references" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
             © 2017
