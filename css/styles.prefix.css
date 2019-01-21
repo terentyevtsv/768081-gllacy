@@ -1,10 +1,104 @@
-/* Основное оформление */
-.feedback,
-.sub-catalog-container,
-.form-search-container,
-.form-login-container,
-.section-basket-container {
-  display: none;
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+
+  background-color: #849d8f;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }
 
 .modal-show {
@@ -16,6 +110,31 @@
 .modal-error {
   -webkit-animation: shake 0.6s;
           animation: shake 0.6s;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Основное оформление */
+.feedback,
+.sub-catalog-container,
+.form-search-container,
+.form-login-container,
+.section-basket-container {
+  display: none;
 }
 
 /* Стили полей ввода */
@@ -44,24 +163,6 @@
 
 .input-style:focus {
   border-color: rgb(46, 136, 228);
-}
-
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-
-  clip: rect(0, 0, 0, 0);
-}
-
-body {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Roboto", Arial, sans-serif;
-
-  background-color: #849d8f;
 }
 
 .fixed-part {
@@ -917,6 +1018,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -928,22 +1032,22 @@ body {
   background-repeat: no-repeat;
   width: 560px;
 
-  padding: 16px 0px 0px 19px;
+  padding: 16px 0px 23px 19px;
   text-align: left;
 
   border-radius: 15px;
 
   margin-bottom: 40px;
+
+  background-size: cover;
 }
 
 .offer-raspberry {
   background-image: url("../img/raspberries.jpg");
-  background-position: -50px -94px;
 }
 
 .offer-chocolate {
   background-image: url("../img/chocolate.jpg");
-  background-position: -218px -104px;
 }
 
 .offer-header {
@@ -1458,7 +1562,7 @@ body {
   padding: 11px 22px 11px 22px;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin: 0px 21px 23px 0px;
+  margin: 0px 21px 0 0px;
   border-radius: 20px;
 }
 
@@ -2032,11 +2136,6 @@ body {
   margin: 0;
 }
 
-.footer-logo {
-  padding: 0;
-  margin: 0;
-}
-
 .intensive-site {
   font-size: 12px;
   line-height: 18px;
@@ -2170,100 +2269,6 @@ body {
 
 .btn-form-feedback:active::before {
   border-radius: 30px;
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-  }
-
-  70% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-  }
-
-  90% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-  }
-
-  70% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-  }
-
-  90% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-  }
 }
 
 .catalog {
